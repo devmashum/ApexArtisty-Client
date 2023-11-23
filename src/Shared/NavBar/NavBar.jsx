@@ -4,8 +4,8 @@ import logo from '../../assets/Logo/logo.png'
 const NavBar = () => {
     const navbarLinks = <>
 
-        <Link className='mr-3 text-xl font-bold' to={'/'}>Home</Link>
-        <Link className='mr-3 text-xl font-bold' to={'/allContest'}>All Contest</Link>
+        <Link className='mr-3 text-xl font-bold hover:text-blue-600' to={'/'}>Home</Link>
+        <Link className='mr-3 text-xl font-bold hover:text-blue-600' to={'/allContest'}>All Contest</Link>
     </>
     return (
         <div className="navbar  p-5 fixed z-10 bg-opacity-40 bg-black text-white">
@@ -14,7 +14,7 @@ const NavBar = () => {
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <ul tabIndex={0} className="menu menu-md dropdown-content mt-3 z-[1] p-2 shadow  rounded-box w-52 text-white bg-yellow-600 ">
                         {navbarLinks}
                     </ul>
 
@@ -34,7 +34,7 @@ const NavBar = () => {
                     <label tabIndex={0} className="btn btn-ghost text-3xl  ">
                         <FaRegUserCircle />
                     </label>
-                    <ul tabIndex={0} className=" menu menu-base dropdown-content mt-3 z-[1] p-5 m-5 shadow bg-base-100 rounded-box w-52">
+                    <ul tabIndex={0} className=" menu menu-base dropdown-content mt-3 z-[1] p-5 m-5 shadow bg-base-100 rounded-box w-52 text-black">
 
                         <Link className='text-xl font-bold'>User Name</Link>
                         <Link className='text-xl font-bold'>Dashboard</Link>
