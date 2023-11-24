@@ -4,6 +4,9 @@ import {
 import Main from "../Layout/Main/Main";
 import Home from "../Pages/Home/Home";
 import AllContest from "../Pages/AllContest/AllContest";
+import Login from "../Components/Login/Login";
+import Registration from "../Components/Registration/Registration";
+import PrivateRoutes from "./PrivateRoutes";
 
 export const router = createBrowserRouter([
     {
@@ -16,10 +19,19 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'allContest',
-                element: <AllContest></AllContest>
+                element: <PrivateRoutes><AllContest></AllContest></PrivateRoutes>
+            },
+            {
+                path: 'login',
+                element: <Login></Login>
+            },
+            {
+                path: 'registration',
+                element: <Registration></Registration>
             }
         ]
     },
+
 ]);
 
 

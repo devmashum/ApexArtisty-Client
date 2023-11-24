@@ -1,14 +1,24 @@
 import { Link } from 'react-router-dom';
 import { FaRegUserCircle } from "react-icons/fa";
+import { BiLogInCircle } from "react-icons/bi";
 import logo from '../../assets/Logo/logo.png'
+import useAuth from '../../Hooks/useAuth';
 const NavBar = () => {
     const navbarLinks = <>
 
         <Link className='mr-3 text-xl font-bold hover:text-blue-600' to={'/'}>Home</Link>
         <Link className='mr-3 text-xl font-bold hover:text-blue-600' to={'/allContest'}>All Contest</Link>
+        <Link className='mr-3 text-xl font-bold hover:text-blue-600' to={'/registration'}>Registration</Link>
     </>
-    // TODO: Load original user
-    const user = true;
+    const { user, logOut } = useAuth();
+
+    const handleLogout = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.log(error))
+    }
+
+
     return (
         <div className="navbar  p-5 fixed z-10 bg-opacity-40 bg-black text-white">
             <div className="navbar-start">
@@ -41,10 +51,11 @@ const NavBar = () => {
 
                             <Link className='text-xl font-bold hover:text-blue-600'>User Name</Link>
                             <Link className='text-xl font-bold hover:text-blue-600'>Dashboard</Link>
-                            <Link className='text-xl font-bold hover:text-blue-600'>Log Out</Link>
+                            <Link onClick={handleLogout} className='text-xl font-bold hover:text-blue-600'>Log Out</Link>
 
                         </ul>
-                    </div> : <button>Login</button>
+                    </div>
+                        : <Link to={'login'}><BiLogInCircle /></Link>
                 }
             </div>
 
