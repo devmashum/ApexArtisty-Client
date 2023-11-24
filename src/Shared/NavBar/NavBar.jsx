@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { FaRegUserCircle } from "react-icons/fa";
 import { BiLogInCircle } from "react-icons/bi";
 import logo from '../../assets/Logo/logo.png'
@@ -6,9 +6,9 @@ import useAuth from '../../Hooks/useAuth';
 const NavBar = () => {
     const navbarLinks = <>
 
-        <Link className='mr-3 text-xl font-bold hover:text-blue-600' to={'/'}>Home</Link>
-        <Link className='mr-3 text-xl font-bold hover:text-blue-600' to={'/allContest'}>All Contest</Link>
-        <Link className='mr-3 text-xl font-bold hover:text-blue-600' to={'/registration'}>Registration</Link>
+        <NavLink className={({ isActive }) => isActive ? 'btn btn-primary text-base font-bold text-white' : 'btn-ghost btn text-base font-bold text-white'} to={'/'}>Home</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'btn btn-primary text-base font-bold text-white ' : 'btn-ghost btn text-base font-bold text-white '} to={'/allContest'}>All Contest</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'btn btn-primary text-base font-bold text-white ' : 'btn-ghost btn text-base font-bold text-white border border-sm border-blue-600 '} to={'/registration'}>Registration</NavLink>
     </>
     const { user, logOut } = useAuth();
 
@@ -20,7 +20,7 @@ const NavBar = () => {
 
 
     return (
-        <div className="navbar  p-5 fixed z-10 bg-opacity-40 bg-black text-white">
+        <div className="navbar  p-5 fixed z-10 bg-opacity-40 bg-blue-600 text-white">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -40,22 +40,30 @@ const NavBar = () => {
 
                 {navbarLinks}
             </div>
-            <div className="navbar-end text-3xl">
+            <div className="navbar-end ">
 
                 {
                     user ? <div className=' dropdown dropdown-end'>
-                        <label tabIndex={0} className="btn btn-ghost text-3xl  ">
+                        <label tabIndex={0} className=" btn btn-secondary text-3xl">
                             <FaRegUserCircle />
                         </label>
-                        <ul tabIndex={0} className=" menu menu-base dropdown-content mt-3 z-[1]  shadow bg-base-100 rounded-box w-40 text-white bg-gradient-to-r from-cyan-500 to-blue-500 ">
+                        <ul tabIndex={0} className=" menu menu-base dropdown-content mt-3 z-[1]  shadow bg-base-100 rounded-box bg-gradient-to-r from-cyan-500 to-blue-500 text-xl ">
 
-                            <Link className='text-xl font-bold hover:text-blue-600'>User Name</Link>
-                            <Link className='text-xl font-bold hover:text-blue-600'>Dashboard</Link>
-                            <Link onClick={handleLogout} className='text-xl font-bold hover:text-blue-600'>Log Out</Link>
+                            <Link className={({ isActive }) => isActive ? ' text-2xl font-bold  text-secondary ' : 'text-2xl font-bold '}> <span className='text-fuchsia-600 text-2xl font-bold'>{user?.displayName}
+                            </span>
+                            </Link>
+                            <hr />
+                            <Link to={'/dashboard'} className={({ isActive }) => isActive ? 'btn btn-primary text-base font-bold text-white' : 'btn-ghost btn text-base font-bold text-white'}>Dashboard</Link>
+                            <hr />
+                            <Link onClick={handleLogout} className={({ isActive }) => isActive ? 'btn btn-primary text-base font-bold text-white' : 'btn-ghost btn text-base font-bold text-white'}>Log Out </Link>
 
                         </ul>
                     </div>
-                        : <Link to={'login'}><BiLogInCircle /></Link>
+                        :
+                        <div>
+
+                            <Link className='btn btn-secondary  font-bold text-white text-2xl' to={'login'}><BiLogInCircle /></Link>
+                        </div>
                 }
             </div>
 

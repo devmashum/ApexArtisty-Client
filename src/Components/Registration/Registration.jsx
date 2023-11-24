@@ -3,6 +3,8 @@ import { AuthContext } from "../../Provider/AuthProviders";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import Swal from "sweetalert2";
+import { FcGoogle } from "react-icons/fc";
+import GoogleSignIn from "../GoogleSignIn/GoogleSignIn";
 
 
 const Registration = () => {
@@ -10,19 +12,24 @@ const Registration = () => {
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
 
-    const { createUser } = useContext(AuthContext);
+    const { createUser, updateUserProfile } = useContext(AuthContext);
     const handleRegistration = event => {
         event.preventDefault();
         const form = event.target;
         const name = form.name.value;
-        const image = form.image.value;
+        const photo = form.photo.value;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(name, image, email, password)
+        console.log(name, photo, email, password)
         createUser(email, password)
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser)
+                updateUserProfile(name, photo)
+                    .then(() => {
+                        console.log('user profile info updated')
+                    })
+                    .catch(error => console.log(error))
                 Swal.fire({
                     position: "top-end",
                     icon: "success",
@@ -57,7 +64,7 @@ const Registration = () => {
                                     <span className="label-text">Image URL</span>
                                 </label>
                                 <input
-                                    name="image"
+                                    name="photo"
                                     type="text" placeholder="Image URL" className="input input-bordered" required />
                             </div>
                             <div className="form-control">
@@ -83,6 +90,7 @@ const Registration = () => {
 
                             <h1 className="text-xl">Already Registered ! <Link className="text-xl text-blue-600 font-bold" to={'/login'}>Login</Link></h1>
                         </form>
+                        <GoogleSignIn></GoogleSignIn>
                     </div>
                 </div>
             </div></>

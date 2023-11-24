@@ -19,7 +19,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'allContest',
-                element: <PrivateRoutes><AllContest></AllContest></PrivateRoutes>
+                element: <AllContest></AllContest>
             },
             {
                 path: 'login',

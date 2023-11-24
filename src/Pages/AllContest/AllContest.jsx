@@ -1,4 +1,4 @@
-import img from '../../assets/Hero/b2.jpg'
+import img from '../../assets/Hero/b5.jpg'
 const AllContest = () => {
     return (
         <div>

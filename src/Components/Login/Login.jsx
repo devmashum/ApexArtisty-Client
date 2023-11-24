@@ -1,8 +1,10 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProviders";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+
 import { Helmet } from "react-helmet";
 import Swal from "sweetalert2";
+import GoogleSignIn from "../GoogleSignIn/GoogleSignIn";
 
 
 const Login = () => {
@@ -66,7 +68,9 @@ const Login = () => {
                             </div>
                             <h1 className="text-xl">Have no account ! <Link className="text-xl text-blue-600 font-bold" to={'/registration'}>Register</Link></h1>
 
+
                         </form>
+                        <GoogleSignIn></GoogleSignIn>
                     </div>
                 </div>
             </div></>
