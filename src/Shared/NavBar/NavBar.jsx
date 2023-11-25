@@ -7,7 +7,7 @@ const NavBar = () => {
     const navbarLinks = <>
 
         <NavLink className={({ isActive }) => isActive ? 'btn btn-primary text-base font-bold text-white' : 'btn-ghost btn text-base font-bold text-white'} to={'/'}>Home</NavLink>
-        <NavLink className={({ isActive }) => isActive ? 'btn btn-primary text-base font-bold text-white ' : 'btn-ghost btn text-base font-bold text-white '} to={'/allContest'}>All Contest</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'btn btn-primary text-base font-bold text-white mr-5' : 'btn-ghost btn text-base font-bold text-white '} to={'/allContest'}>All Contest</NavLink>
         <NavLink className={({ isActive }) => isActive ? 'btn btn-primary text-base font-bold text-white ' : 'btn-ghost btn text-base font-bold text-white border border-sm border-blue-600 '} to={'/registration'}>Registration</NavLink>
     </>
     const { user, logOut } = useAuth();

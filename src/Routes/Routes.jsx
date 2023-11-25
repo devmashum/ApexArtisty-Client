@@ -19,7 +19,8 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'allContest',
-                element: <AllContest></AllContest>
+                element: <PrivateRoutes><AllContest></AllContest></PrivateRoutes>,
+                loader: () => fetch('http://localhost:3000/arts')
             },
             {
                 path: 'login',

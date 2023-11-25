@@ -1,0 +1,122 @@
+[
+    {
+        "name": "Abstract Expressionism Challenge",
+        "img": "https://i.ibb.co/26Pjqhy/22.jpg",
+        "participants_count": 30,
+        "short_description": "Express yourself through abstract art in this unique challenge."
+    },
+    {
+        "name": "Digital Art Showcase",
+        "img": "https://i.ibb.co/P6WBXMs/21.jpg",
+        "participants_count": 25,
+        "short_description": "Explore the world of digital art and bring your imagination to life."
+    },
+    {
+        "name": "Nature-Inspired Creations",
+        "img": "https://i.ibb.co/9hwh8XC/20.jpg",
+        "participants_count": 40,
+        "short_description": "Celebrate the beauty of nature through your artistic vision."
+    },
+    {
+        "name": "Surrealistic Wonders",
+        "img": "https://i.ibb.co/QHSjnkn/19.jpg",
+        "participants_count": 20,
+        "short_description": "Challenge reality and create surreal masterpieces."
+    },
+    {
+        "name": "Portrait Excellence",
+        "img": "https://ibb.co/mGQNQVF.jpg",
+        "participants_count": 35,
+        "short_description": "Capture the essence of individuals through stunning portrait art."
+    },
+    {
+        "name": "Fantasy Realm Explorations",
+        "img": "https://i.ibb.co/JBcT8f0/18.jpg",
+        "participants_count": 28,
+        "short_description": "Embark on a journey into fantastical realms through your art."
+    },
+    {
+        "name": "Urban Street Art Challenge",
+        "img": "https://i.ibb.co/31p7GKy/17.jpg",
+        "participants_count": 22,
+        "short_description": "Transform urban spaces with your creative street art."
+    },
+    {
+        "name": "Minimalist Marvels",
+        "img": "https://i.ibb.co/Pzb54dP/16.jpg",
+        "participants_count": 18,
+        "short_description": "Discover the beauty of simplicity in the world of minimalist art."
+    },
+    {
+        "name": "Cultural Fusion",
+        "img": "https://i.ibb.co/pPwqtCv/15.jpg",
+        "participants_count": 32,
+        "short_description": "Blend different cultures and create unique artistic expressions."
+    },
+    {
+        "name": "Futuristic Visions",
+        "img": "https://i.ibb.co/mJmgs30/13.jpg",
+        "participants_count": 26,
+        "short_description": "Imagine the future and illustrate your visions through art."
+    },
+    {
+        "name": "Impressionist Delights",
+        "img": "https://i.ibb.co/kgvn0Bd/14.jpg",
+        "participants_count": 29,
+        "short_description": "Capture the essence of a moment through the lens of impressionism."
+    },
+    {
+        "name": "Mystical Creatures Unleashed",
+        "img": "https://i.ibb.co/Csy1M0H/12.jpg",
+        "participants_count": 23,
+        "short_description": "Bring mythical creatures to life in your artistic creations."
+    },
+    {
+        "name": "Cubist Explorations",
+        "img": "https://i.ibb.co/wCTRvc8/11.jpg",
+        "participants_count": 31,
+        "short_description": "Challenge conventional perspectives with the magic of cubism."
+    },
+    {
+        "name": "Whimsical Wonderland",
+        "img": "https://i.ibb.co/BKfnC6G/10.jpg",
+        "participants_count": 27,
+        "short_description": "Enter a whimsical wonderland through your imaginative artwork."
+    },
+    {
+        "name": "Ancient Mythology Revived",
+        "img": "https://i.ibb.co/qg2kz8q/9.jpg",
+        "participants_count": 21,
+        "short_description": "Revive ancient myths and legends in your artistic creations."
+    },
+    {
+        "name": "Sci-Fi Extravaganza",
+        "img": "https://i.ibb.co/gMd5RFM/8.jpg",
+        "participants_count": 33,
+        "short_description": "Dive into the realms of science fiction and illustrate futuristic worlds."
+    },
+    {
+        "name": "Whimsical Watercolors",
+        "img": "https://i.ibb.co/k4z83CM/7.jpg",
+        "participants_count": 19,
+        "short_description": "Express your creativity through the vibrant medium of watercolors."
+    },
+    {
+        "name": "Graffiti Fusion",
+        "img": "https://i.ibb.co/MsqBqx5/5.jpg",
+        "participants_count": 24,
+        "short_description": "Merge graffiti art with other forms and create a fusion masterpiece."
+    },
+    {
+        "name": "Pop Art Revolution",
+        "img": "https://i.ibb.co/7VGYVHf/6.jpg",
+        "participants_count": 37,
+        "short_description": "Join the pop art movement and revolutionize your artistic expression."
+    },
+    {
+        "name": "Whirlwind of Colors",
+        "img": "https://i.ibb.co/z6Pz56P/4.jpg",
+        "participants_count": 15,
+        "short_description": "Immerse yourself in a whirlwind of colors and showcase your vibrant art."
+    }
+]
