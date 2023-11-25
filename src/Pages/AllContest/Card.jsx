@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 
 const Card = ({ art }) => {
-    const { name, img, short_description } = art;
+    const { _id, name, img, short_description, participants_count, contest_prize } = art;
     return (
         <div>
 
@@ -10,11 +11,13 @@ const Card = ({ art }) => {
                 </figure>
                 <div className="card-body">
                     <h2 className="card-title h-20">{name}</h2>
+                    <h2 className="font-bold">Participants: {participants_count}</h2>
                     <p className="w-full h-20">{short_description}</p>
+                    <p className="w-full h-20">{contest_prize}</p>
 
                     <div className="card-actions justify-end">
 
-                        <button className="btn btn-primary mt-10">Details</button>
+                        <Link className="w-full" to={`/details/${_id}`}><button className="btn text-xl text-white bg-gradient-to-r from-cyan-500 w-full to-blue-500 mt-10">Details</button></Link>
                     </div>
                 </div>
             </div>

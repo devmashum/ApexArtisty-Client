@@ -7,6 +7,10 @@ import AllContest from "../Pages/AllContest/AllContest";
 import Login from "../Components/Login/Login";
 import Registration from "../Components/Registration/Registration";
 import PrivateRoutes from "./PrivateRoutes";
+import DetailsPage from "../Pages/AllContest/DetailsPage";
+import Dashboard from "../Layout/Dashboard";
+import MyCart from "../Dashboard/MyCart/MyCart";
+import ManageUser from "../Dashboard/Admin/ManageUser";
 
 export const router = createBrowserRouter([
     {
@@ -29,9 +33,28 @@ export const router = createBrowserRouter([
             {
                 path: 'registration',
                 element: <Registration></Registration>
+            },
+            {
+                path: 'details/:id',
+                element: <DetailsPage></DetailsPage>,
+                loader: ({ params }) => fetch(`http://localhost:3000/arts/${params.id}`)
             }
         ]
     },
+    {
+        path: 'dashboard',
+        element: <Dashboard></Dashboard>,
+        children: [
+            {
+                path: 'cart',
+                element: <MyCart></MyCart>
+            },
+            {
+                path: 'users',
+                element: <ManageUser></ManageUser>
+            }
+        ]
+    }
 
 ]);
 

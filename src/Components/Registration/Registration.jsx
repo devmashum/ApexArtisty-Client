@@ -3,11 +3,12 @@ import { AuthContext } from "../../Provider/AuthProviders";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import Swal from "sweetalert2";
-import { FcGoogle } from "react-icons/fc";
 import GoogleSignIn from "../GoogleSignIn/GoogleSignIn";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
 
 
 const Registration = () => {
+    const axiosPublic = useAxiosPublic();
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
@@ -21,6 +22,14 @@ const Registration = () => {
         const email = form.email.value;
         const password = form.password.value;
         console.log(name, photo, email, password)
+        const userInfo = {
+            email: email,
+            name: name
+        }
+        axiosPublic.post('/users', userInfo)
+            .then(res => {
+                console.log(res.data);
+            })
         createUser(email, password)
             .then(result => {
                 const loggedUser = result.user;

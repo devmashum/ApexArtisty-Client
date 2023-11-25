@@ -6,9 +6,10 @@ import useAuth from '../../Hooks/useAuth';
 const NavBar = () => {
     const navbarLinks = <>
 
-        <NavLink className={({ isActive }) => isActive ? 'btn btn-primary text-base font-bold text-white' : 'btn-ghost btn text-base font-bold text-white'} to={'/'}>Home</NavLink>
-        <NavLink className={({ isActive }) => isActive ? 'btn btn-primary text-base font-bold text-white mr-5' : 'btn-ghost btn text-base font-bold text-white '} to={'/allContest'}>All Contest</NavLink>
-        <NavLink className={({ isActive }) => isActive ? 'btn btn-primary text-base font-bold text-white ' : 'btn-ghost btn text-base font-bold text-white border border-sm border-blue-600 '} to={'/registration'}>Registration</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'btn bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-base font-bold text-white' : 'btn-ghost btn text-base font-bold text-white'} to={'/'}>Home</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'btn bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-base font-bold text-white mr-5' : 'btn-ghost btn text-base font-bold text-white '} to={'/allContest'}>All Contest</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'btn bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-base font-bold text-white mr-5' : 'btn-ghost btn text-base font-bold text-white '} to={'/dashboard/cart'}>My Cart</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'btn bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-base font-bold text-white ' : 'btn-ghost btn text-base font-bold text-white border border-sm border-blue-600 '} to={'/registration'}>Registration</NavLink>
     </>
     const { user, logOut } = useAuth();
 
@@ -20,7 +21,7 @@ const NavBar = () => {
 
 
     return (
-        <div className="navbar  p-5 fixed z-10 bg-opacity-40 bg-blue-600 text-white">
+        <div className="navbar  p-2 fixed z-10 bg-opacity-50 bg-blue-400">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -33,7 +34,7 @@ const NavBar = () => {
                 </div>
                 <Link to={'/'}>  <div className='flex justify-center items-center'>
                     <img className='w-20 h-22 ml-5 ' src={logo} alt="" />
-                    <a className=" lg:text-4xl text-2xl font-extrabold text-center ">ApexArtistry</a>
+                    <a className=" lg:text-4xl text-2xl font-extrabold text-center text-white ">ApexArtistry</a>
                 </div></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
