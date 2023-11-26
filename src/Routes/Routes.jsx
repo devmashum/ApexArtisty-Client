@@ -12,6 +12,7 @@ import Dashboard from "../Layout/Dashboard";
 import MyCart from "../Dashboard/MyCart/MyCart";
 import ManageUser from "../Dashboard/Admin/ManageUser";
 
+
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -38,7 +39,7 @@ export const router = createBrowserRouter([
                 path: 'details/:id',
                 element: <DetailsPage></DetailsPage>,
                 loader: ({ params }) => fetch(`http://localhost:3000/arts/${params.id}`)
-            }
+            },
         ]
     },
     {
