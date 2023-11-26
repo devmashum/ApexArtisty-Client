@@ -1,7 +1,9 @@
 import { NavLink, Outlet } from "react-router-dom"
 import { IoHomeOutline } from "react-icons/io5";
 
+
 const Dashboard = () => {
+
     const isAdmin = true;
     const isUser = false;
     const isContentCreator = false;
