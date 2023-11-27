@@ -1,9 +1,11 @@
+import DashboardHeader from "../../Shared/DashboardHeader";
 
 
 const ManageContest = () => {
     return (
         <div>
-            <h1>Manage Contest</h1>
+            <DashboardHeader heading={'Manage Contest'}></DashboardHeader>
+
         </div>
     );
 };

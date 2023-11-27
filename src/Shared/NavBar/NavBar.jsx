@@ -16,8 +16,11 @@ const NavBar = () => {
 
         <NavLink className={({ isActive }) => isActive ? 'btn bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-base font-bold text-white' : 'btn-ghost btn text-base font-bold text-white'} to={'/'}>Home</NavLink>
         <NavLink className={({ isActive }) => isActive ? 'btn bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-base font-bold text-white mr-5' : 'btn-ghost btn text-base font-bold text-white '} to={'/allContest'}>All Contest</NavLink>
-        <NavLink className={({ isActive }) => isActive ? 'btn bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-base font-bold text-white mr-5' : 'btn-ghost btn text-xl font-bold text-white '} to={'/dashboard/cart'}><FaCartPlus></FaCartPlus> <button className=' btn-secondary btn btn-xs'>{cart.length}</button> </NavLink>
 
+        {
+            user ? <NavLink className={({ isActive }) => isActive ? 'btn bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-base font-bold text-white mr-5' : 'btn-ghost btn text-xl font-bold text-white '} to={'/dashboard/cart'}><FaCartPlus></FaCartPlus> <button className=' btn-secondary btn btn-xs'>{cart.length}</button> </NavLink> :
+                <div> <NavLink className={({ isActive }) => isActive ? 'btn bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-base font-bold text-white mr-5' : 'btn-ghost btn text-xl font-bold text-white '} to={'/login'}><FaCartPlus></FaCartPlus> <button className=' btn-secondary btn btn-xs'>0</button> </NavLink></div>
+        }
     </>
 
 
@@ -33,6 +36,10 @@ const NavBar = () => {
                     </label>
                     <ul tabIndex={0} className="menu menu-md dropdown-content mt-3 z-[1] p-2 shadow  rounded-box w-52 text-white bg-gradient-to-r from-cyan-500 to-blue-500  ">
                         {navbarLinks}
+
+
+
+
                     </ul>
 
                 </div>
@@ -51,10 +58,10 @@ const NavBar = () => {
                     <div>
                         < NavLink className={'text-2xl btn mr-5 hidden'} to={'/registration'}>Registration</NavLink>
                     </div> : <div>
-                        <div className='flex flex-col items-center'>
+                        <div className='flex flex-col items-center pt-5'>
 
                             <div>
-                                <Link className='btn btn-success  font-bold text-white text-2xl mr-2' to={'/registration'}><FaSignInAlt /></Link>
+                                <Link className='btn btn-success  font-bold text-white text-2xl mr-2 ' to={'/registration'}><FaSignInAlt /></Link>
                             </div>
                             <div>
                                 <Link className='text-white'>Sign Up</Link>
@@ -87,10 +94,10 @@ const NavBar = () => {
 
                         <div>
 
-                            <div className='flex flex-col items-center'>
+                            <div className='flex flex-col items-center pt-5'>
 
                                 <div>
-                                    <Link className='btn btn-secondary  font-bold text-white text-2xl' to={'login'}><BiLogInCircle /></Link>
+                                    <Link className='btn btn-secondary  font-bold text-white text-2xl ' to={'login'}><BiLogInCircle /></Link>
                                 </div>
                                 <div>
                                     <Link className='text-white'>Login</Link>

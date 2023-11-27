@@ -24,7 +24,7 @@ const Dashboard = () => {
                             <li><NavLink to='/dashboard/users '>Manage User</NavLink></li>
                         </ul>
                         <ul className="menu text-xl">
-                            <li><NavLink to='/dashboard/allUsers '>Manage Contest</NavLink></li>
+                            <li><NavLink to='/dashboard/manageContest '>Manage Contest</NavLink></li>
                         </ul></> : <>
                     </>
                 }
@@ -33,6 +33,9 @@ const Dashboard = () => {
                         <p className="w-full btn btn-sm mb-10">{user?.email}</p>
                         <ul className="menu text-xl">
                             <li><NavLink to='/dashboard/addArts '>My Profile</NavLink></li>
+                        </ul>
+                        <ul className="menu text-xl">
+                            <li><NavLink to='/dashboard/cart '>My Cart</NavLink></li>
                         </ul>
                         <ul className="menu text-xl">
                             <li><NavLink to='/dashboard/addArts '>Participated Contest</NavLink></li>
@@ -46,7 +49,10 @@ const Dashboard = () => {
                     isCreator ? <>  <h2 className="pl-5 divider text-xl border border-green-300 p-5 m-3 rounded-3xl font-bold">Creator Panel</h2>
                         <p className="w-full btn btn-sm mb-10">{user?.email}</p>
                         <ul className="menu text-xl">
-                            <li><NavLink to='/dashboard/cart '>Add Contest</NavLink></li>
+                            <li><NavLink to='/dashboard/cart '>My Cart</NavLink></li>
+                        </ul>
+                        <ul className="menu text-xl">
+                            <li><NavLink to='/dashboard/addContest '>Add Contest</NavLink></li>
                         </ul>
                         <ul className="menu text-xl">
                             <li><NavLink to='/'>My Created Contest</NavLink></li>

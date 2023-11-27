@@ -6,6 +6,7 @@ import { MdDeleteOutline } from "react-icons/md";
 import { FaCreativeCommons, FaUsers } from "react-icons/fa";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
+import DashboardHeader from "../../Shared/DashboardHeader";
 
 const ManageUser = () => {
     const axiosSecure = useAxiosSecure();
@@ -72,10 +73,8 @@ const ManageUser = () => {
     }
     return (
         <div>
-            <div className="text-center p-14 justify-evenly bg-gradient-to-r from-blue-500 to-cyan-500">
-
-                <h2 className="text-3xl">Total Users: {users.length}</h2>
-            </div>
+            <DashboardHeader heading={'Manage Users'}></DashboardHeader>
+            <h2 className="text-center text-2xl">Total Users: {users.length}</h2>
 
             <div className="overflow-x-auto px-10">
                 <table className="table">

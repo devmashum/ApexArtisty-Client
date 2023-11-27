@@ -11,6 +11,7 @@ import DetailsPage from "../Pages/AllContest/DetailsPage";
 import Dashboard from "../Layout/Dashboard";
 import MyCart from "../Dashboard/MyCart/MyCart";
 import ManageUser from "../Dashboard/Admin/ManageUser";
+import ManageContest from "../Dashboard/Admin/ManageContest";
 
 
 export const router = createBrowserRouter([
@@ -53,6 +54,10 @@ export const router = createBrowserRouter([
             {
                 path: 'users',
                 element: <ManageUser></ManageUser>
+            },
+            {
+                path: 'manageContest',
+                element: <ManageContest></ManageContest>
             }
         ]
     }

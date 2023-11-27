@@ -22,6 +22,7 @@ const DetailsPage = () => {
                 price: price,
                 contest_prize: contest_prize,
                 deadline: deadline,
+                image: img,
                 email: user.email
             }
             axiosPublic.post('/cart', cartItem)
