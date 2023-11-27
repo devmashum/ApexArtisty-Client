@@ -3,6 +3,7 @@ import useAuth from "../../Hooks/useAuth";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import Swal from "sweetalert2";
 import useCart from "../../Hooks/useCart";
+import useParticipants from "../../Hooks/useParticipants";
 
 
 const DetailsPage = () => {
@@ -13,6 +14,8 @@ const DetailsPage = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const [, refetch] = useCart();
+
+
 
     const handleAddToCart = () => {
         if (user && user.email) {
@@ -62,7 +65,7 @@ const DetailsPage = () => {
     }
 
     return (
-        <div className="card bg-base-100 shadow-xl px-5 py-5 pt-40">
+        <div className="card bg-base-100 shadow-xl px-5 py-5 pt-32">
             <figure>
                 <img className=" w-[750px] h-80 object-cover" src={img} alt="Shoes" />
 
@@ -71,11 +74,13 @@ const DetailsPage = () => {
                 <p className="text-base text-red-400  font-bold btn btn-outline w-6/12 mx-auto"> Deadline: {deadline}</p>
                 <h2 className="text-2xl font-bold">{name}</h2>
                 <h2 className="font-bold">Participants: {participants_count}</h2>
+
                 <p className="w-full"><span className="font-bold">Short Description:</span> {short_description}</p>
                 <p className="w-full "><span className="font-bold">Contest Prize:</span>   {contest_prize}</p>
                 <div>
                     <h1 className="text-xl font-bold text-red-400">Price: $ {price}</h1>
                 </div>
+
                 <div className="card-actions justify-end">
                     <Link onClick={() => handleAddToCart(arts)} className="w-full" ><button className="btn text-xl text-white bg-gradient-to-r from-cyan-500 w-full to-blue-500 mt-10">Register</button></Link>
                 </div>

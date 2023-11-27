@@ -1,4 +1,4 @@
-
+import { GiLoveHowl } from "react-icons/gi";
 
 const Footer = () => {
     return (
@@ -17,8 +17,9 @@ const Footer = () => {
                 </div>
             </nav>
             <aside>
-                <p>Copyright © 2023 - All right reserved by ApexArtistry</p>
+                <h1>© 2023 ApexArtistry. All Rights Reserved. Designed and Developed with <span className='flex items-center justify-center   text-4xl '><GiLoveHowl /></span> by <span className='font-extrabold'><a className='hover-link' href="">Faisal</a></span></h1>
             </aside>
+
         </footer>
     );
 };

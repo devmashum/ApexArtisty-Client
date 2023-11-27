@@ -32,17 +32,15 @@ const Dashboard = () => {
                     !isAdmin && !isCreator && (<><h2 className="pl-5 divider text-xl border border-green-300 p-5 m-3 rounded-3xl font-bold">User Panel</h2>
                         <p className="w-full btn btn-sm mb-10">{user?.email}</p>
                         <ul className="menu text-xl">
-                            <li><NavLink to='/dashboard/addArts '>My Profile</NavLink></li>
+                            <li><NavLink to='/dashboard/myProfile '>My Profile</NavLink></li>
                         </ul>
                         <ul className="menu text-xl">
                             <li><NavLink to='/dashboard/cart '>My Cart</NavLink></li>
                         </ul>
                         <ul className="menu text-xl">
-                            <li><NavLink to='/dashboard/addArts '>Participated Contest</NavLink></li>
+                            <li><NavLink to='/dashboard/participatedContest'>Participated Contest</NavLink></li>
                         </ul>
-                        <ul className="menu text-xl">
-                            <li><NavLink to='/dashboard/addArts '>Winning Contest</NavLink></li>
-                        </ul></>)
+                    </>)
                 }
 
                 {

@@ -1,10 +1,9 @@
-import Swal from "sweetalert2";
-import useAuth from "../../Hooks/useAuth";
-import useAxiosPublic from "../../Hooks/useAxiosPublic";
-import DashboardHeader from "../../Shared/DashboardHeader";
+import Swal from 'sweetalert2';
+import useAxiosPublic from '../../Hooks/useAxiosPublic';
+import contact from '../../assets/Hero/contact.jpg'
 
-const MyProfile = () => {
-    const { user } = useAuth();
+
+const Contact = () => {
     const axiosPublic = useAxiosPublic();
     const handleContactForm = (event) => {
         event.preventDefault();
@@ -34,12 +33,9 @@ const MyProfile = () => {
             })
     }
     return (
-        <div>
-            <DashboardHeader heading={'My Profile'}></DashboardHeader>
-            <div className="m-5 flex flex-col ">
-                <h1 ><span className="font-bold">User Name:</span> {user?.displayName}</h1>
-                <h1><span className="font-bold">User Email:</span> {user?.email}</h1>
-            </div>
+        <div >
+
+            <img className='w-full h-[500px] object-cover ' src={contact} alt="" />
             <div>
                 <h3 className="m-5">Dear Valued Customer,
 
@@ -49,13 +45,13 @@ const MyProfile = () => {
                         <label className="label">
                             <span className="label-text">Name</span>
                         </label>
-                        <input type="text" name="name" defaultValue={user?.displayName} className="input input-bordered" />
+                        <input type="text" name="name" className="input input-bordered" />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Email</span>
                         </label>
-                        <input type="email" name="email" defaultValue={user?.email} className="input input-bordered" required />
+                        <input type="email" name="email" className="input input-bordered" required />
                     </div>
                     <div className="form-control">
                         <label className="label">
@@ -81,4 +77,4 @@ const MyProfile = () => {
     );
 };
 
-export default MyProfile;
+export default Contact;

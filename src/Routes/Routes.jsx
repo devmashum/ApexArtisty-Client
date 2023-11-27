@@ -12,6 +12,10 @@ import Dashboard from "../Layout/Dashboard";
 import MyCart from "../Dashboard/MyCart/MyCart";
 import ManageUser from "../Dashboard/Admin/ManageUser";
 import ManageContest from "../Dashboard/Admin/ManageContest";
+import Contact from "../Pages/Contact/Contact";
+import AboutUs from "../Pages/About Us/AboutUs";
+import ParticipatedContest from "../Dashboard/User/ParticipatedContest";
+import MyProfile from "../Dashboard/User/MyProfile";
 
 
 export const router = createBrowserRouter([
@@ -41,6 +45,14 @@ export const router = createBrowserRouter([
                 element: <DetailsPage></DetailsPage>,
                 loader: ({ params }) => fetch(`http://localhost:3000/arts/${params.id}`)
             },
+            {
+                path: 'contact',
+                element: <Contact></Contact>
+            },
+            {
+                path: 'aboutUs',
+                element: <AboutUs></AboutUs>
+            }
         ]
     },
     {
@@ -58,6 +70,14 @@ export const router = createBrowserRouter([
             {
                 path: 'manageContest',
                 element: <ManageContest></ManageContest>
+            },
+            {
+                path: 'participatedContest',
+                element: <ParticipatedContest></ParticipatedContest>
+            },
+            {
+                path: 'myProfile',
+                element: <MyProfile></MyProfile>
             }
         ]
     }

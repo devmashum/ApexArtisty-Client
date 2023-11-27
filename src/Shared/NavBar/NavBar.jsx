@@ -16,6 +16,8 @@ const NavBar = () => {
 
         <NavLink className={({ isActive }) => isActive ? 'btn bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-base font-bold text-white' : 'btn-ghost btn text-base font-bold text-white'} to={'/'}>Home</NavLink>
         <NavLink className={({ isActive }) => isActive ? 'btn bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-base font-bold text-white mr-5' : 'btn-ghost btn text-base font-bold text-white '} to={'/allContest'}>All Contest</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'btn bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-base font-bold text-white mr-5' : 'btn-ghost btn text-base font-bold text-white '} to={'/aboutUs'}>About Us</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'btn bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-base font-bold text-white mr-5' : 'btn-ghost btn text-base font-bold text-white '} to={'/contact'}>Contact</NavLink>
 
         {
             user ? <NavLink className={({ isActive }) => isActive ? 'btn bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-base font-bold text-white mr-5' : 'btn-ghost btn text-xl font-bold text-white '} to={'/dashboard/cart'}><FaCartPlus></FaCartPlus> <button className=' btn-secondary btn btn-xs'>{cart.length}</button> </NavLink> :
