@@ -3,7 +3,7 @@
 import { useQuery } from "@tanstack/react-query";
 
 import { MdDeleteOutline } from "react-icons/md";
-import { FaUsers } from "react-icons/fa";
+import { FaCreativeCommons, FaUsers } from "react-icons/fa";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
 
@@ -56,23 +56,38 @@ const ManageUser = () => {
                 }
             })
     }
+
+    const handleMakeCreator = user => {
+        axiosSecure.patch(`/users/creator/${user._id}`)
+            .then(res => {
+                if (res.data.modifiedCount > 0) {
+                    refetch();
+                    Swal.fire({
+                        icon: "success",
+                        title: `${user.name} is Creator Now`,
+                    });
+                    refetch();
+                }
+            })
+    }
     return (
         <div>
-            <div className="flex justify-evenly">
-                <h2 className="text-3xl">All Users</h2>
-                <h2 className="text-3xl">Total Users {users.length}</h2>
+            <div className="text-center p-14 justify-evenly bg-gradient-to-r from-blue-500 to-cyan-500">
+
+                <h2 className="text-3xl">Total Users: {users.length}</h2>
             </div>
 
-            <div className="overflow-x-auto pr-10">
+            <div className="overflow-x-auto px-10">
                 <table className="table">
                     {/* head */}
                     <thead>
-                        <tr>
-                            <th></th>
+                        <tr className=" font-extrabold text-base">
+                            <th>#</th>
                             <th>Name</th>
                             <th>Email</th>
-                            <th>Role</th>
-                            <th>Action</th>
+                            <th>Role(Creator)</th>
+                            <th>Role(Admin)</th>
+                            <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -81,6 +96,11 @@ const ManageUser = () => {
                                 <th>{index + 1}</th>
                                 <td>{user.name}</td>
                                 <td>{user.email}</td>
+                                <td>   {user.role1 === 'creator' ? 'Creator' :
+                                    <button onClick={() => handleMakeCreator(user)} className="bg-orange-500 btn text-white">
+                                        <FaCreativeCommons></FaCreativeCommons>
+                                    </button>
+                                }</td>
                                 <td>
                                     {user.role === 'admin' ? 'Admin' :
                                         <button onClick={() => handleMakeAdmin(user)} className="bg-green-500 btn text-white">
