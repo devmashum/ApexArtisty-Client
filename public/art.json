@@ -6,7 +6,8 @@
         "short_description": "Express yourself through abstract art in this unique challenge.",
         "contest_prize": "Cash prize and exhibition opportunity",
         "contest_winner_name": "To be announced",
-        "deadline": "2023-12-15"
+        "deadline": "2023-12-15",
+        "price": 500
     },
     {
         "name": "Digital Art Showcase",
@@ -15,7 +16,8 @@
         "short_description": "Explore the world of digital art and bring your imagination to life.",
         "contest_prize": "Digital art tools and software",
         "contest_winner_name": "To be announced",
-        "deadline": "2023-12-20"
+        "deadline": "2023-12-20",
+        "price": 100
     },
     {
         "name": "Nature-Inspired Creations",
@@ -24,7 +26,8 @@
         "short_description": "Celebrate the beauty of nature through your artistic vision.",
         "contest_prize": "Nature retreat and art supplies",
         "contest_winner_name": "To be announced",
-        "deadline": "2023-12-10"
+        "deadline": "2023-12-10",
+        "price": 75
     },
     {
         "name": "Surrealistic Wonders",
@@ -33,7 +36,8 @@
         "short_description": "Challenge reality and create surreal masterpieces.",
         "contest_prize": "Art workshop and exhibition opportunity",
         "contest_winner_name": "To be announced",
-        "deadline": "2023-12-18"
+        "deadline": "2023-12-18",
+        "price": 120
     },
     {
         "name": "Portrait Excellence",
@@ -42,7 +46,8 @@
         "short_description": "Capture the essence of individuals through stunning portrait art.",
         "contest_prize": "Portrait commission and art supplies",
         "contest_winner_name": "To be announced",
-        "deadline": "2023-12-22"
+        "deadline": "2023-12-22",
+        "price": 80
     },
     {
         "name": "Fantasy Realm Explorations",
@@ -51,7 +56,8 @@
         "short_description": "Embark on a journey into fantastical realms through your art.",
         "contest_prize": "Fantasy book collection and art materials",
         "contest_winner_name": "To be announced",
-        "deadline": "2023-12-25"
+        "deadline": "2023-12-25",
+        "price": 150
     },
     {
         "name": "Urban Street Art Challenge",
@@ -60,7 +66,8 @@
         "short_description": "Transform urban spaces with your creative street art.",
         "contest_prize": "City mural project and art supplies",
         "contest_winner_name": "To be announced",
-        "deadline": "2023-12-12"
+        "deadline": "2023-12-12",
+        "price": 60
     },
     {
         "name": "Minimalist Marvels",
@@ -69,7 +76,8 @@
         "short_description": "Discover the beauty of simplicity in the world of minimalist art.",
         "contest_prize": "Minimalist art exhibition and art tools",
         "contest_winner_name": "To be announced",
-        "deadline": "2023-12-28"
+        "deadline": "2023-12-28",
+        "price": 90
     },
     {
         "name": "Cultural Fusion",
@@ -78,7 +86,8 @@
         "short_description": "Blend different cultures and create unique artistic expressions.",
         "contest_prize": "Cultural exchange trip and art supplies",
         "contest_winner_name": "To be announced",
-        "deadline": "2023-12-14"
+        "deadline": "2023-12-14",
+        "price": 70
     },
     {
         "name": "Futuristic Visions",
@@ -87,7 +96,8 @@
         "short_description": "Imagine the future and illustrate your visions through art.",
         "contest_prize": "Futuristic technology gadgets and art materials",
         "contest_winner_name": "To be announced",
-        "deadline": "2023-12-30"
+        "deadline": "2023-12-30",
+        "price": 110
     },
     {
         "name": "Impressionist Delights",
@@ -96,7 +106,8 @@
         "short_description": "Capture the essence of a moment through the lens of impressionism.",
         "contest_prize": "Artistic retreat and painting supplies",
         "contest_winner_name": "To be announced",
-        "deadline": "2023-12-17"
+        "deadline": "2023-12-17",
+        "price": 85
     },
     {
         "name": "Mystical Creatures Unleashed",
@@ -105,7 +116,8 @@
         "short_description": "Bring mythical creatures to life in your artistic creations.",
         "contest_prize": "Mythical creatures sculpture and art tools",
         "contest_winner_name": "To be announced",
-        "deadline": "2023-12-23"
+        "deadline": "2023-12-23",
+        "price": 95
     },
     {
         "name": "Cubist Explorations",
@@ -114,7 +126,8 @@
         "short_description": "Challenge conventional perspectives with the magic of cubism.",
         "contest_prize": "Cubist art exhibition and art supplies",
         "contest_winner_name": "To be announced",
-        "deadline": "2023-12-19"
+        "deadline": "2023-12-19",
+        "price": 75
     },
     {
         "name": "Whimsical Wonderland",
@@ -123,7 +136,8 @@
         "short_description": "Enter a whimsical wonderland through your imaginative artwork.",
         "contest_prize": "Whimsical art gallery showcase and art tools",
         "contest_winner_name": "To be announced",
-        "deadline": "2023-12-16"
+        "deadline": "2023-12-16",
+        "price": 65
     },
     {
         "name": "Ancient Mythology Revived",
@@ -132,7 +146,8 @@
         "short_description": "Revive ancient myths and legends in your artistic creations.",
         "contest_prize": "Mythology book collection and art supplies",
         "contest_winner_name": "To be announced",
-        "deadline": "2023-12-21"
+        "deadline": "2023-12-21",
+        "price": 55
     },
     {
         "name": "Sci-Fi Extravaganza",
@@ -141,7 +156,8 @@
         "short_description": "Dive into the realms of science fiction and illustrate futuristic worlds.",
         "contest_prize": "Sci-Fi literature collection and art materials",
         "contest_winner_name": "To be announced",
-        "deadline": "2023-12-27"
+        "deadline": "2023-12-27",
+        "price": 100
     },
     {
         "name": "Whimsical Watercolors",
@@ -150,7 +166,8 @@
         "short_description": "Express your creativity through the vibrant medium of watercolors.",
         "contest_prize": "Watercolor painting workshop and art supplies",
         "contest_winner_name": "To be announced",
-        "deadline": "2023-12-13"
+        "deadline": "2023-12-13",
+        "price": 80
     },
     {
         "name": "Graffiti Fusion",
@@ -159,7 +176,8 @@
         "short_description": "Merge graffiti art with other forms and create a fusion masterpiece.",
         "contest_prize": "Graffiti art exhibition and art tools",
         "contest_winner_name": "To be announced",
-        "deadline": "2023-12-26"
+        "deadline": "2023-12-26",
+        "price": 60
     },
     {
         "name": "Pop Art Revolution",
@@ -168,7 +186,8 @@
         "short_description": "Join the pop art movement and revolutionize your artistic expression.",
         "contest_prize": "Pop art gallery showcase and art materials",
         "contest_winner_name": "To be announced",
-        "deadline": "2023-12-24"
+        "deadline": "2023-12-24",
+        "price": 90
     },
     {
         "name": "Whirlwind of Colors",
@@ -177,6 +196,7 @@
         "short_description": "Immerse yourself in a whirlwind of colors and showcase your vibrant art.",
         "contest_prize": "Colorful art exhibition and art supplies",
         "contest_winner_name": "To be announced",
-        "deadline": "2023-12-29"
+        "deadline": "2023-12-29",
+        "price": 70
     }
 ]

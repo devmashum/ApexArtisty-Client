@@ -1,23 +1,27 @@
 import { Link, NavLink } from 'react-router-dom';
-import { FaRegUserCircle } from "react-icons/fa";
+import { FaCartPlus, FaRegUserCircle, FaSignInAlt } from "react-icons/fa";
 import { BiLogInCircle } from "react-icons/bi";
 import logo from '../../assets/Logo/logo.png'
 import useAuth from '../../Hooks/useAuth';
+import useCart from '../../Hooks/useCart';
 const NavBar = () => {
-    const navbarLinks = <>
-
-        <NavLink className={({ isActive }) => isActive ? 'btn bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-base font-bold text-white' : 'btn-ghost btn text-base font-bold text-white'} to={'/'}>Home</NavLink>
-        <NavLink className={({ isActive }) => isActive ? 'btn bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-base font-bold text-white mr-5' : 'btn-ghost btn text-base font-bold text-white '} to={'/allContest'}>All Contest</NavLink>
-        <NavLink className={({ isActive }) => isActive ? 'btn bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-base font-bold text-white mr-5' : 'btn-ghost btn text-base font-bold text-white '} to={'/dashboard/cart'}>My Cart</NavLink>
-        <NavLink className={({ isActive }) => isActive ? 'btn bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-base font-bold text-white ' : 'btn-ghost btn text-base font-bold text-white border border-sm border-blue-600 '} to={'/registration'}>Registration</NavLink>
-    </>
+    const [cart] = useCart();
     const { user, logOut } = useAuth();
-
     const handleLogout = () => {
         logOut()
             .then(() => { })
             .catch(error => console.log(error))
     }
+    const navbarLinks = <>
+
+        <NavLink className={({ isActive }) => isActive ? 'btn bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-base font-bold text-white' : 'btn-ghost btn text-base font-bold text-white'} to={'/'}>Home</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'btn bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-base font-bold text-white mr-5' : 'btn-ghost btn text-base font-bold text-white '} to={'/allContest'}>All Contest</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'btn bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-base font-bold text-white mr-5' : 'btn-ghost btn text-xl font-bold text-white '} to={'/dashboard/cart'}><FaCartPlus></FaCartPlus> <button className=' btn-secondary btn btn-xs'>{cart.length}</button> </NavLink>
+
+    </>
+
+
+
 
 
     return (
@@ -43,8 +47,27 @@ const NavBar = () => {
             </div>
             <div className="navbar-end ">
 
+                {user ?
+                    <div>
+                        < NavLink className={'text-2xl btn mr-5 hidden'} to={'/registration'}>Registration</NavLink>
+                    </div> : <div>
+                        <div className='flex flex-col items-center'>
+
+                            <div>
+                                <Link className='btn btn-success  font-bold text-white text-2xl mr-2' to={'/registration'}><FaSignInAlt /></Link>
+                            </div>
+                            <div>
+                                <Link className='text-white'>Sign Up</Link>
+                            </div>
+
+                        </div>
+                    </div>
+                }
+
+
                 {
                     user ? <div className=' dropdown dropdown-end'>
+
                         <label tabIndex={0} className=" btn btn-secondary text-3xl">
                             <FaRegUserCircle />
                         </label>
@@ -61,14 +84,24 @@ const NavBar = () => {
                         </ul>
                     </div>
                         :
+
                         <div>
 
-                            <Link className='btn btn-secondary  font-bold text-white text-2xl' to={'login'}><BiLogInCircle /></Link>
+                            <div className='flex flex-col items-center'>
+
+                                <div>
+                                    <Link className='btn btn-secondary  font-bold text-white text-2xl' to={'login'}><BiLogInCircle /></Link>
+                                </div>
+                                <div>
+                                    <Link className='text-white'>Login</Link>
+                                </div>
+
+                            </div>
                         </div>
                 }
             </div>
 
-        </div>
+        </div >
     );
 };
 
