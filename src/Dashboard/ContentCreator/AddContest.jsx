@@ -22,18 +22,21 @@ const AddContest = () => {
             = form.contest_winner_name
                 .value;
         const artist_name = form.artist_name.value;
+        const contest_prize = form.contest_prize.value;
         console.log(name, email);
         const formData = {
             name: name,
             email: email,
             img: img,
-            participants_count: participants_count,
-            description: description,
+            participants_count: parseFloat(participants_count),
+
+            short_description: description,
             deadline: deadline,
-            price: price,
+            price: parseFloat(price),
             contest_winner_name
                 : contest_winner_name,
-            artist_name: artist_name
+            artist_name: artist_name,
+            contest_prize: contest_prize
 
 
         }
@@ -111,6 +114,15 @@ const AddContest = () => {
                         <input type="text" name="contest_winner_name" placeholder="Contest Winner Name" className="input input-bordered" />
 
                     </div>
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Contest Prize (optional)
+
+                            </span>
+                        </label>
+                        <input type="text" name="contest_prize" placeholder="Contest Winner Name" className="input input-bordered" />
+
+                    </div>
 
                     <div className="form-control">
                         <label className="label">
@@ -123,7 +135,7 @@ const AddContest = () => {
                         <label className="label">
                             <span className="label-text">Price</span>
                         </label>
-                        <input type="number" name="price" defaultValue={'0'} className="input input-bordered" required />
+                        <input type="text" name="price" className="input input-bordered" required />
 
                     </div>
 

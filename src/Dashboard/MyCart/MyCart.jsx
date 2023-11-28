@@ -80,7 +80,7 @@ const MyCart = () => {
                                 <td>
                                     {item.name}
                                 </td>
-                                <td>   {item.price}</td>
+                                <td>  $ {item.price}</td>
                                 <th>
                                     <button onClick={() => handleDeleteItem(item._id)} className="btn bg-red-600 text-white"><FaTrash></FaTrash></button>
                                 </th>
