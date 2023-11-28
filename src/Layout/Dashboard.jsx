@@ -52,12 +52,15 @@ const Dashboard = () => {
                         <ul className="menu text-xl">
                             <li><NavLink to='/dashboard/addContest '>Add Contest</NavLink></li>
                         </ul>
+
                         <ul className="menu text-xl">
-                            <li><NavLink to='/'>My Created Contest</NavLink></li>
+                            <li><NavLink to='/dashboard/contestSubmitted'>Contest Submitted </NavLink></li>
+
                         </ul>
                         <ul className="menu text-xl">
-                            <li><NavLink to='/'>Contest Submitted </NavLink></li>
-                        </ul></> : <></>
+                            <li><NavLink to='/dashboard/myWinningContest'>My Winning Contest</NavLink></li>
+                        </ul>
+                    </> : <></>
                 }
 
 

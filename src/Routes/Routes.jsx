@@ -16,6 +16,9 @@ import Contact from "../Pages/Contact/Contact";
 import AboutUs from "../Pages/About Us/AboutUs";
 import ParticipatedContest from "../Dashboard/User/ParticipatedContest";
 import MyProfile from "../Dashboard/User/MyProfile";
+import AddContest from "../Dashboard/ContentCreator/AddContest";
+import ContestSubmitted from "../Dashboard/ContentCreator/ContestSubmitted";
+import MyWinningContest from "../Dashboard/ContentCreator/MyWinningContest";
 
 
 export const router = createBrowserRouter([
@@ -78,6 +81,18 @@ export const router = createBrowserRouter([
             {
                 path: 'myProfile',
                 element: <MyProfile></MyProfile>
+            },
+            {
+                path: 'addContest',
+                element: <AddContest></AddContest>
+            },
+            {
+                path: 'contestSubmitted',
+                element: <ContestSubmitted></ContestSubmitted>
+            },
+            {
+                path: 'myWinningContest',
+                element: <MyWinningContest></MyWinningContest>
             }
         ]
     }

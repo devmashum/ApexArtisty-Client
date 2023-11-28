@@ -36,9 +36,9 @@ const MyProfile = () => {
     return (
         <div>
             <DashboardHeader heading={'My Profile'}></DashboardHeader>
-            <div className="m-5 flex flex-col ">
-                <h1 ><span className="font-bold">User Name:</span> {user?.displayName}</h1>
-                <h1><span className="font-bold">User Email:</span> {user?.email}</h1>
+            <div className="p-5 flex flex-col  m-2 text-xl">
+                <h1><span className="font-bold text-black">User Name:</span> {user?.displayName}</h1>
+                <h1><span className="font-bold text-black">User Email: </span>{user?.email}</h1>
             </div>
             <div>
                 <h3 className="m-5">Dear Valued Customer,
