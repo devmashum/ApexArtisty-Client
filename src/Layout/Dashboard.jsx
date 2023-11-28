@@ -15,7 +15,7 @@ const Dashboard = () => {
 
     return (
         <div className="flex ">
-            <div className="lg:w-64 min-h-screen bg-gradient-to-r from-cyan-500 to-blue-500 pt-10">
+            <div className="lg:w-64 min-h-screen bg-gradient-to-r from-cyan-500 to-blue-500 pt-10 px-2">
 
                 {
                     isAdmin ? <><h2 className="pl-5 divider text-xl border border-green-300 p-5 m-3 rounded-3xl font-bold">Admin Panel</h2>

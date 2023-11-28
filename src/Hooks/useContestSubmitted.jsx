@@ -7,9 +7,9 @@ const useContestSubmitted = () => {
     const axiosSecure = useAxiosSecure();
     const { user } = useAuth();
     const { refetch, data: arts = [] } = useQuery({
-        queryKey: ['arts', user?.email],
+        queryKey: ['arts/creator', user?.email],
         queryFn: async () => {
-            const res = await axiosSecure.get(`/arts?email=${user.email}`)
+            const res = await axiosSecure.get(`/arts/creator?email=${user.email}`)
             return res.data;
         }
     });

@@ -21,6 +21,8 @@ const ContestSubmitted = () => {
                                 <th>Deadline</th>
 
 
+
+
                             </tr>
                         </thead>
                         <tbody>
@@ -43,6 +45,7 @@ const ContestSubmitted = () => {
                                     {item.name}
                                 </td>
                                 <td className="text-xl">{item.deadline}</td>
+
 
 
                             </tr>)}

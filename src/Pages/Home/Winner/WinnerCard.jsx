@@ -1,13 +1,9 @@
-import { Link } from "react-router-dom";
-import useParticipants from "../../Hooks/useParticipants";
 import { PiMedalBold } from "react-icons/pi";
+import { Link } from "react-router-dom";
 
-const Card = ({ art }) => {
-    const { _id, name, img, short_description, participants_count, contest_prize, role } = art;
-
-
-
-
+const WinnerCard = ({ winner }) => {
+    const { img, name, participants_count, short_description, contest_prize, _id, role
+    } = winner;
     return (
 
         <div>
@@ -22,7 +18,7 @@ const Card = ({ art }) => {
 
 
                     {
-                        role ? <> <h2 className="card-title w-2/3 justify-start btn btn-outline bg-green-500 text-white"><PiMedalBold />{role}</h2></> : <><h2 className="card-title w-2/3 justify-start btn btn-outline  text-white "></h2></>
+                        role ? <> <h2 className="card-title w-2/3 justify-start btn btn-outline bg-green-500 text-white "><PiMedalBold />{role}</h2></> : <><h2 className="card-title w-2/3 justify-start btn btn-outline  text-white "></h2></>
                     }
                     <h2 className="font-bold">Participants: {participants_count}</h2>
                     <p className="w-full h-20">{short_description}</p>
@@ -41,4 +37,4 @@ const Card = ({ art }) => {
     );
 };
 
-export default Card;
+export default WinnerCard;

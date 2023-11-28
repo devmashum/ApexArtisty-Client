@@ -3,12 +3,12 @@ import useAuth from "../../Hooks/useAuth";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import Swal from "sweetalert2";
 import useCart from "../../Hooks/useCart";
-import useParticipants from "../../Hooks/useParticipants";
+import { PiMedalBold } from "react-icons/pi";
 
 
 const DetailsPage = () => {
     const arts = useLoaderData();
-    const { _id, name, img, short_description, participants_count, contest_prize, deadline, price } = arts;
+    const { _id, name, img, short_description, participants_count, contest_prize, deadline, price, role } = arts;
     const { user } = useAuth();
     const axiosPublic = useAxiosPublic();
     const navigate = useNavigate();
@@ -73,6 +73,9 @@ const DetailsPage = () => {
             <div className="card-body text-center">
                 <p className="text-base text-red-400  font-bold btn btn-outline w-6/12 mx-auto"> Deadline: {deadline}</p>
                 <h2 className="text-2xl font-bold">{name}</h2>
+                {
+                    role ? <> <h2 className="card-title w-6/12 justify-center btn btn-outline bg-green-500 text-white mx-auto text-center ">< PiMedalBold />WINNER</h2></> : <><h2 className="card-title w-2/3 justify-start btn btn-outline  text-white "></h2></>
+                }
                 <h2 className="font-bold">Participants: {participants_count}</h2>
 
                 <p className="w-full"><span className="font-bold">Short Description:</span> {short_description}</p>
