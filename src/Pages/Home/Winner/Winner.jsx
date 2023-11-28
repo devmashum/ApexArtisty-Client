@@ -1,14 +1,17 @@
 
+
 import useManageContest from '../../../Hooks/useManageContest';
 import WinnerCard from './WinnerCard';
 
+
 const Winner = () => {
     const [arts] = useManageContest()
+
     return (
         <div>
-            <div>
 
-            </div>
+
+
             <div className='grid grid-cols-3 gap-3'>
 
 

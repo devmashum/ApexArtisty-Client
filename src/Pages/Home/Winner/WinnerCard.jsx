@@ -1,12 +1,17 @@
+import { useState } from "react";
 import { PiMedalBold } from "react-icons/pi";
 import { Link } from "react-router-dom";
 
 const WinnerCard = ({ winner }) => {
     const { img, name, participants_count, short_description, contest_prize, _id, role
     } = winner;
+
+
+
     return (
 
         <div>
+
 
             <div className="card bg-base-100 shadow-xl px-5 py-5">
                 <figure>
