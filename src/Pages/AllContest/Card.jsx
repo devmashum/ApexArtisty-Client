@@ -1,12 +1,8 @@
 import { Link } from "react-router-dom";
-import useParticipants from "../../Hooks/useParticipants";
 import { PiMedalBold } from "react-icons/pi";
 
 const Card = ({ art }) => {
     const { _id, name, img, short_description, participants_count, contest_prize, role } = art;
-
-
-
 
     return (
 

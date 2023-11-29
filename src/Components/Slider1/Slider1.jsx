@@ -5,6 +5,7 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import './Slider1.css';
+import 'swiper/css/navigation';
 // import required modules
 import { Autoplay, EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 
@@ -25,7 +26,7 @@ const Slider1 = () => {
         <>
             <Swiper
                 effect={'coverflow'}
-                grabCursor={true}
+                spaceBetween={30}
                 centeredSlides={true}
                 // 
                 autoplay={{
