@@ -3,6 +3,7 @@ import Card from "./Card";
 
 import img from '../../assets/Hero/untitled folder/b6.jpg'
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 
 const AllContest = () => {
     const arts = useLoaderData();
@@ -16,7 +17,7 @@ const AllContest = () => {
 
     return (
         <div>
-
+            <Helmet><title>ApexArtistry | All Contest</title></Helmet>
 
             <img className="w-full  h-[500px] object-cover" src={img} alt="" />
 
@@ -27,7 +28,7 @@ const AllContest = () => {
                     <p className="py-6">Unleash your creative journey with our powerful search tool. Dive into a world of captivating paintings, sculptures, and more. Whether you're seeking vibrant abstracts or timeless classics, find the perfect masterpiece to ignite your imagination. Explore, experience, and embrace the beauty of art at your fingertips. Start your artistic exploration now!</p>
                     <div >
                         <input type="text"
-                            onKeyUp={search} placeholder="Search here with an Art name......." className="input input-bordered input-success w-full" />
+                            onKeyUp={search} placeholder="Search here with an Art name......." className="input input-bordered input-secondary w-full" />
 
                     </div>
 

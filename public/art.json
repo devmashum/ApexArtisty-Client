@@ -1,5 +1,6 @@
 [
     {
+        // http://localhost:3000
         "name": "Abstract Expressionism Challenge",
         "img": "https://i.ibb.co/26Pjqhy/22.jpg",
         "participants_count": 30,

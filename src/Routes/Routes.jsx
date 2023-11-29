@@ -19,6 +19,7 @@ import MyProfile from "../Dashboard/User/MyProfile";
 import AddContest from "../Dashboard/ContentCreator/AddContest";
 import ContestSubmitted from "../Dashboard/ContentCreator/ContestSubmitted";
 import MyWinningContest from "../Dashboard/ContentCreator/MyWinningContest";
+import Support from "../Dashboard/Admin/Support";
 
 
 export const router = createBrowserRouter([
@@ -93,6 +94,10 @@ export const router = createBrowserRouter([
             {
                 path: 'myWinningContest',
                 element: <MyWinningContest></MyWinningContest>
+            },
+            {
+                path: 'support',
+                element: <Support></Support>
             }
         ]
     }

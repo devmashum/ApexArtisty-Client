@@ -22,7 +22,7 @@ const Card = ({ art }) => {
 
 
                     {
-                        role ? <> <h2 className="card-title w-2/3 justify-start btn btn-outline bg-green-500 text-white"><PiMedalBold />{role}</h2></> : <><h2 className="card-title w-2/3 justify-start btn btn-outline  text-white "></h2></>
+                        role ? <> <h2 className="card-title w-2/3 justify-start btn btn-outline bg-green-500 text-white"><PiMedalBold />{role}</h2></> : <><h2 className="card-title w-2/3 btn btn-outline   text-white ">Pending...</h2></>
                     }
                     <h2 className="font-bold">Participants: {participants_count}</h2>
                     <p className="w-full h-20">{short_description}</p>

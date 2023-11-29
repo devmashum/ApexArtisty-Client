@@ -11,7 +11,7 @@ const Banner = () => {
     return (
         <Carousel className="text-center">
             <div className="lg:w-full lg:h-[700px]">
-                <img className=" object-cover" src={img6} />
+                <img className=" object-contain" src={img6} />
 
             </div>
 

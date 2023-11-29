@@ -3,6 +3,7 @@ import { IoHomeOutline } from "react-icons/io5";
 import useAdmin from "../Hooks/useAdmin";
 import useAuth from "../Hooks/useAuth";
 import useCreator from "../Hooks/useCreator";
+import { Helmet } from "react-helmet";
 
 
 
@@ -15,6 +16,8 @@ const Dashboard = () => {
 
     return (
         <div className="flex ">
+            <Helmet><title>ApexArtistry | Dashboard</title></Helmet>
+            {/*  */}
             <div className="lg:w-64 min-h-screen bg-gradient-to-r from-cyan-500 to-blue-500 pt-10 px-2">
 
                 {
@@ -25,8 +28,12 @@ const Dashboard = () => {
                         </ul>
                         <ul className="menu text-xl">
                             <li><NavLink to='/dashboard/manageContest '>Manage Contest</NavLink></li>
-                        </ul></> : <>
-                    </>
+                        </ul>
+                        <ul className="menu text-xl">
+                            <li><NavLink to='/dashboard/support '>Support</NavLink></li>
+                        </ul>
+
+                    </> : <></>
                 }
                 {
                     !isAdmin && !isCreator && (<><h2 className="pl-5 divider text-xl border border-green-300 p-5 m-3 rounded-3xl font-bold">User Panel</h2>
@@ -38,7 +45,7 @@ const Dashboard = () => {
                             <li><NavLink to='/dashboard/cart '>My Cart</NavLink></li>
                         </ul>
                         <ul className="menu text-xl">
-                            <li><NavLink to='/dashboard/participatedContest'>Participated Contest</NavLink></li>
+                            <li><NavLink to='/dashboard/participatedContest'>Donated Contest</NavLink></li>
                         </ul>
                     </>)
                 }
@@ -69,6 +76,10 @@ const Dashboard = () => {
                 </ul>
 
             </div>
+            {/*  */}
+
+
+
             <div className="flex-1  ">
                 <Outlet></Outlet>
             </div>
