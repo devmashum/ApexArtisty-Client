@@ -5,22 +5,14 @@ import DashboardHeader from "../../Shared/DashboardHeader";
 
 const Support = () => {
     const axiosSecure = useAxiosSecure();
-    const contact = () => {
-        axiosSecure.get('/contact')
-            .then(res => {
-                console.log(res.data)
-            })
-            .catch(error => {
-                console.log(error)
-            })
-    }
-    // const { data: contact = [] } = useQuery({
-    //     queryKey: ['contact'],
-    //     queryFn: async () => {
-    //         const res = await axiosSecure.get('/contact');
-    //         return res.data;
-    //     }
-    // });
+
+    const { data: contact = [] } = useQuery({
+        queryKey: ['contact'],
+        queryFn: async () => {
+            const res = await axiosSecure.get('/contact');
+            return res.data;
+        }
+    });
     return (
         <div>
             <DashboardHeader heading={'Support'}></DashboardHeader>

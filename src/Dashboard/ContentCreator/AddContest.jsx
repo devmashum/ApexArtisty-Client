@@ -58,7 +58,7 @@ const AddContest = () => {
             })
     }
     return (
-        <div>
+        <div className="max-w-[425px] lg:max-w-full md:max-w-full">
             <DashboardHeader heading={'Add Your Contest'}></DashboardHeader>
 
             <div>

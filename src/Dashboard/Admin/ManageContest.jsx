@@ -52,24 +52,11 @@ const ManageContest = () => {
             })
     }
 
-    // const handleMakeCreator = user => {
-    //     axiosSecure.patch(`/users/creator/${user._id}`)
-    //         .then(res => {
-    //             if (res.data.modifiedCount > 0) {
-    //                 refetch();
-    //                 Swal.fire({
-    //                     icon: "success",
-    //                     title: `${user.name} is Creator Now`,
-    //                 });
-    //                 refetch();
-    //             }
-    //         })
-    // }
     return (
-        <div>
+        <div className="max-w-[425px] lg:max-w-full md:max-w-full">
             <DashboardHeader heading={'Manage Contest'}></DashboardHeader>
 
-            <h1 className="text-center p-10">Total Participants: {arts.length}</h1>
+            <h1 className="text-center text-2xl lg:p-10">Total Participants: {arts.length}</h1>
             <div className="overflow-x-auto px-10">
                 <table className="table">
                     {/* head */}

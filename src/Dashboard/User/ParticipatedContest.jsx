@@ -6,7 +6,7 @@ const ParticipatedContest = () => {
     const [cart] = useCart();
 
     return (
-        <div>
+        <div className="max-w-[425px] lg:max-w-full md:max-w-full">
             <DashboardHeader heading={'My Participated Contest'}></DashboardHeader>
 
             <div>
@@ -21,6 +21,7 @@ const ParticipatedContest = () => {
                                 <th>Image</th>
                                 <th>Name</th>
                                 <th>Deadline</th>
+
 
 
                             </tr>
@@ -45,6 +46,7 @@ const ParticipatedContest = () => {
                                     {item.name}
                                 </td>
                                 <td className="text-xl">{item.deadline}</td>
+
 
 
                             </tr>)}

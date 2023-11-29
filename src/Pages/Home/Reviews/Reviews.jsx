@@ -21,7 +21,7 @@ const Reviews = () => {
         }
     });
     return (
-        <div>
+        <div className='mb-40'>
 
             <div className="mx-auto text-center md:w-4/12 my-4 mt-20">
 

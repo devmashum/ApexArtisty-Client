@@ -34,7 +34,7 @@ const MyProfile = () => {
             })
     }
     return (
-        <div>
+        <div className="max-w-[425px] lg:max-w-full md:max-w-full">
             <DashboardHeader heading={'My Profile'}></DashboardHeader>
             <div className="p-5 flex flex-col  m-2 text-xl">
                 <h1><span className="font-bold text-black">User Name:</span> {user?.displayName}</h1>

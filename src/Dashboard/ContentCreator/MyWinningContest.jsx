@@ -5,8 +5,8 @@ import { GiTargetPrize } from "react-icons/gi";
 const MyWinningContest = () => {
     const [arts] = useContestSubmitted();
     return (
-        <div >
-            <DashboardHeader></DashboardHeader>
+        <div className="max-w-[425px] lg:max-w-full md:max-w-full">
+            <DashboardHeader heading={'Winning Contest'}></DashboardHeader>
             <h1 className="text-center p-10">Contest Submitted: {arts.length}</h1>
 
             <div>

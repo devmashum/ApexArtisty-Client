@@ -3,8 +3,8 @@ import DashboardHeader from "../../Shared/DashboardHeader";
 const ContestSubmitted = () => {
     const [arts] = useContestSubmitted();
     return (
-        <div >
-            <DashboardHeader></DashboardHeader>
+        <div className="max-w-[425px] lg:max-w-full md:max-w-full">
+            <DashboardHeader heading={'Submitted Contest'}> </DashboardHeader>
             <h1 className="text-center p-10">Contest Submitted: {arts.length}</h1>
 
             <div>

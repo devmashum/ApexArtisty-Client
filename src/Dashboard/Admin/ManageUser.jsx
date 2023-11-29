@@ -72,15 +72,15 @@ const ManageUser = () => {
             })
     }
     return (
-        <div>
+        <div className=" max-w-[425px] lg:max-w-full md:max-w-full">
             <DashboardHeader heading={'Manage Users'}></DashboardHeader>
             <h2 className="text-center text-2xl">Total Users: {users.length}</h2>
 
-            <div className="overflow-x-auto px-10">
+            <div className="overflow-x-auto lg:px-10 w-full ">
                 <table className="table">
                     {/* head */}
                     <thead>
-                        <tr className=" font-extrabold text-base">
+                        <tr className=" lg:font-extrabold text-base">
                             <th>#</th>
                             <th>Name</th>
                             <th>Email</th>
@@ -93,22 +93,22 @@ const ManageUser = () => {
                         {
                             users.map((user, index) => <tr key={user._id} className="bg-base-200">
                                 <th>{index + 1}</th>
-                                <td>{user.name}</td>
+                                <td >{user.name}</td>
                                 <td>{user.email}</td>
-                                <td>   {user.role1 === 'creator' ? 'Creator' :
-                                    <button onClick={() => handleMakeCreator(user)} className="bg-orange-500 btn text-white">
+                                <td >   {user.role1 === 'creator' ? 'Creator' :
+                                    <button onClick={() => handleMakeCreator(user)} className="bg-orange-500 btn text-white lg:text-xl">
                                         <FaCreativeCommons></FaCreativeCommons>
                                     </button>
                                 }</td>
                                 <td>
                                     {user.role === 'admin' ? 'Admin' :
-                                        <button onClick={() => handleMakeAdmin(user)} className="bg-green-500 btn text-white">
+                                        <button onClick={() => handleMakeAdmin(user)} className="bg-green-500 btn lg:text-xl text-white">
                                             <FaUsers></FaUsers>
                                         </button>
                                     }
                                 </td>
                                 <td>
-                                    <button onClick={() => handleDeleteUser(user)} className=" btn bg-red-500 text-xl text-white">
+                                    <button onClick={() => handleDeleteUser(user)} className=" btn bg-red-500 lg:text-xl text-white">
                                         <MdDeleteOutline />
                                     </button>
                                 </td>

@@ -1,5 +1,6 @@
 
 
+import Slider1 from "../../Components/Slider1/Slider1";
 import Banner from "./Banner/Banner";
 import Reviews from "./Reviews/Reviews";
 
@@ -13,6 +14,8 @@ const Home = () => {
             <Banner></Banner>
             <Winner></Winner>
             <Reviews></Reviews>
+            <Slider1></Slider1>
+
 
         </div>
     );
