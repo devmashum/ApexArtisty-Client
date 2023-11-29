@@ -25,7 +25,7 @@ const Reviews = () => {
 
             <div className="mx-auto text-center md:w-4/12 my-4 mt-20">
 
-                <h3 className="text-4xl uppercase border-b-2 py-4">Customer Reviews</h3>
+                <h3 className="text-4xl uppercase border-b-2 py-4 border-blue-400 ">Customer Reviews</h3>
             </div>
             <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
                 {
