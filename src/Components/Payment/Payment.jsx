@@ -1,11 +1,12 @@
 import { Elements } from '@stripe/react-stripe-js';
-import React from 'react';
-const stripePromise = loadStripe('pk_test_51OFPHTGEBxRi0Wj3bopoNG6WkoojYjxSLaTyUQuhwdCzB3TO7zfsrpnojaxEptCMDuQ5X9i7HwD323apsTaKcnQP00tkuRJTG1');
+import { loadStripe } from '@stripe/stripe-js';
+import CheckOutForm from './CheckOutForm';
+const stripePromise = loadStripe(import.meta.env.VITE_PAYMENT_GATEWAY_PK);
 const Payment = () => {
     return (
-        <div>
+        <div className='lg:pt-40'>
             <Elements stripe={stripePromise}>
-                <CheckoutForm />
+                <CheckOutForm></CheckOutForm>
             </Elements>
         </div>
     );

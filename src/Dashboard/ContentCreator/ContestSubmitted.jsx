@@ -18,7 +18,7 @@ const ContestSubmitted = () => {
                                 </th>
                                 <th>Image</th>
                                 <th>Name</th>
-                                <th>Deadline</th>
+                                <th>Submission Date</th>
 
 
 

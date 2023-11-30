@@ -1,10 +1,11 @@
-import useCart from "../../Hooks/useCart";
+
+import usePayments from "../../Hooks/usePayments";
 import DashboardHeader from "../../Shared/DashboardHeader";
 
 
 const ParticipatedContest = () => {
-    const [cart] = useCart();
 
+    const [payments] = usePayments();
     return (
         <div className="max-w-[425px] lg:max-w-full md:max-w-full">
             <DashboardHeader heading={'My Participated Contest'}></DashboardHeader>
@@ -20,14 +21,15 @@ const ParticipatedContest = () => {
                                 </th>
                                 <th>Image</th>
                                 <th>Name</th>
-                                <th>Deadline</th>
+                                <th>Price</th>
+
 
 
 
                             </tr>
                         </thead>
                         <tbody>
-                            {cart.map((item, index) => <tr key={item._id}>
+                            {payments.map((item, index) => <tr key={item._id}>
 
                                 <td>
                                     {index + 1}
@@ -45,7 +47,10 @@ const ParticipatedContest = () => {
                                 <td className="text-xl">
                                     {item.name}
                                 </td>
-                                <td className="text-xl">{item.deadline}</td>
+                                <td className="text-xl">
+                                    $ {item.price}
+                                </td>
+
 
 
 

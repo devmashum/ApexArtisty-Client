@@ -54,6 +54,9 @@ const Dashboard = () => {
                             <ul className="menu text-xl">
                                 <li><NavLink to='/dashboard/participatedContest'>Donated Contest</NavLink></li>
                             </ul>
+                            <ul className="menu text-xl">
+                                <li><NavLink to='/dashboard/paymentHistory'>Payment History</NavLink></li>
+                            </ul>
                         </>)
                     }
 
@@ -73,6 +76,9 @@ const Dashboard = () => {
                             </ul>
                             <ul className="menu text-xl">
                                 <li><NavLink to='/dashboard/myWinningContest'>My Winning Contest</NavLink></li>
+                            </ul>
+                            <ul className="menu text-xl">
+                                <li><NavLink to='/dashboard/paymentHistory'>Payment History</NavLink></li>
                             </ul>
                         </> : <></>
                     }
@@ -140,6 +146,9 @@ const Dashboard = () => {
                                                 <ul className="menu text-xl">
                                                     <li><NavLink to='/dashboard/participatedContest'>Donated Contest</NavLink></li>
                                                 </ul>
+                                                <ul className="menu text-xl">
+                                                    <li><NavLink to='/dashboard/paymentHistory'>Payment History</NavLink></li>
+                                                </ul>
                                             </>)
                                         }
 
@@ -159,6 +168,9 @@ const Dashboard = () => {
                                                 </ul>
                                                 <ul className="menu text-xl">
                                                     <li><NavLink to='/dashboard/myWinningContest'>My Winning Contest</NavLink></li>
+                                                </ul>
+                                                <ul className="menu text-xl">
+                                                    <li><NavLink to='/dashboard/paymentHistory'>Payment History</NavLink></li>
                                                 </ul>
                                             </> : <></>
                                         }

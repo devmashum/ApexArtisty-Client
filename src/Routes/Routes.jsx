@@ -20,6 +20,8 @@ import AddContest from "../Dashboard/ContentCreator/AddContest";
 import ContestSubmitted from "../Dashboard/ContentCreator/ContestSubmitted";
 import MyWinningContest from "../Dashboard/ContentCreator/MyWinningContest";
 import Support from "../Dashboard/Admin/Support";
+import Payment from "../Components/Payment/Payment";
+import PaymentHistory from "../Dashboard/User/PaymentHistory";
 
 
 export const router = createBrowserRouter([
@@ -34,7 +36,7 @@ export const router = createBrowserRouter([
             {
                 path: 'allContest',
                 element: <PrivateRoutes><AllContest></AllContest></PrivateRoutes>,
-                loader: () => fetch('http://localhost:3000/arts')
+                loader: () => fetch('https://apex-artistry-server.vercel.app//arts')
             },
             {
                 path: 'login',
@@ -47,7 +49,7 @@ export const router = createBrowserRouter([
             {
                 path: 'details/:id',
                 element: <DetailsPage></DetailsPage>,
-                loader: ({ params }) => fetch(`http://localhost:3000/arts/${params.id}`)
+                loader: ({ params }) => fetch(`https://apex-artistry-server.vercel.app//arts/${params.id}`)
             },
             {
                 path: 'contact',
@@ -56,7 +58,12 @@ export const router = createBrowserRouter([
             {
                 path: 'aboutUs',
                 element: <AboutUs></AboutUs>
-            }
+            },
+            {
+                path: 'payment',
+                element: <Payment></Payment>
+            },
+
         ]
     },
     {
@@ -98,6 +105,10 @@ export const router = createBrowserRouter([
             {
                 path: 'support',
                 element: <Support></Support>
+            },
+            {
+                path: 'paymentHistory',
+                element: <PaymentHistory></PaymentHistory>
             }
         ]
     }

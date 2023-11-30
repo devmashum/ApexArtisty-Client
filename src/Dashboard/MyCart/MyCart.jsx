@@ -3,6 +3,7 @@ import useCart from "../../Hooks/useCart";
 import DashboardHeader from "../../Shared/DashboardHeader";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import Swal from "sweetalert2";
+import Payment from "../../Components/Payment/Payment";
 
 const MyCart = () => {
     const [cart, refetch] = useCart();
@@ -42,9 +43,10 @@ const MyCart = () => {
             <div className="flex justify-evenly mt-5 items-center text-2xl font-bold">
                 <h2>Total Items: {cart.length}</h2>
                 <h2>Total Price: ${totalPrice}</h2>
-                <button className="btn btn-warning">Pay Now</button>
+                {/* <button className="btn btn-warning">Pay Now</button> */}
 
             </div>
+            <Payment></Payment>
             <p className=" divider"></p>
             <div>
                 <div className="overflow-x-auto">

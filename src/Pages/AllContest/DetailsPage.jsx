@@ -42,6 +42,7 @@ const DetailsPage = () => {
                         });
                         // refetch the card
                         refetch();
+                        navigate('/dashboard/cart')
                     }
                     else {
                         Swal.fire({
