@@ -29,7 +29,7 @@ const AllContest = () => {
                     <p className="py-6">Unleash your creative journey with our powerful search tool. Dive into a world of captivating paintings, sculptures, and more. Whether you're seeking vibrant abstracts or timeless classics, find the perfect masterpiece to ignite your imagination. Explore, experience, and embrace the beauty of art at your fingertips. Start your artistic exploration now!</p>
                     <div >
                         <input type="text"
-                            onKeyUp={search} placeholder="Search here with an Art name......." className="input input-bordered input-secondary w-full" />
+                            onKeyUp={search} placeholder="Search here with an Art name......." className="input input-bordered  w-full" />
 
                     </div>
 

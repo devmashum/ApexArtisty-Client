@@ -14,7 +14,7 @@ const Winner = () => {
 
             <div className='lg:flex justify-center items-center w-full flex-row-reverse  bg-gray-100'>
                 <div className='flex-1'>
-                    <img className="w-full hidden lg:block shadow-2xl p-10 bg-gradient-to-r from-cyan-400 to-blue-600 " src={img} />
+                    <img className="w-full hidden lg:block shadow-xs p-2 bg-gradient-to-r from-cyan-400 to-blue-600 " src={img} />
                 </div>
                 <div className='p-10 flex-1'>
                     <h1 className="lg:text-5xl text-3xl font-bold">Celebrating Artistic Triumphs</h1>

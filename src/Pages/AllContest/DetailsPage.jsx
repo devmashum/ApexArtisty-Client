@@ -77,7 +77,7 @@ const DetailsPage = () => {
                 <p className="text-base text-red-400  font-bold btn btn-outline w-6/12 mx-auto"> Deadline: {deadline}</p>
                 <h2 className="text-2xl font-bold">{name}</h2>
                 {
-                    role ? <> <h2 className="card-title w-6/12 justify-center btn btn-outline bg-green-500 text-white mx-auto text-center ">< PiMedalBold />WINNER</h2></> : <></>
+                    role ? <> <h2 className="card-title w-6/12 justify-center btn btn-outline bg-[#0F1111] text-white mx-auto text-center ">< PiMedalBold />WINNER</h2></> : <></>
                 }
                 <h2 className="font-bold">Participants: {participants_count}</h2>
 
@@ -88,7 +88,7 @@ const DetailsPage = () => {
                 </div>
 
                 <div className="card-actions justify-end">
-                    <Link onClick={() => handleAddToCart(arts)} className="w-full" ><button className="btn text-xl text-white bg-gradient-to-r from-cyan-500 w-full to-blue-500 mt-10">Donate</button></Link>
+                    <Link onClick={() => handleAddToCart(arts)} className="w-full" ><button className="btn text-xl text-white hover:bg-orange-500 bg-orange-400 mt-10">Donate</button></Link>
                 </div>
             </div>
         </div>

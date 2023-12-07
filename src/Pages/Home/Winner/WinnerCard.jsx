@@ -23,7 +23,7 @@ const WinnerCard = ({ winner }) => {
 
 
                     {
-                        role ? <> <h2 className="card-title w-2/3 justify-start btn btn-outline bg-green-500 text-white "><PiMedalBold />{role}</h2></> : <><h2 className="card-title w-2/3 justify-start btn btn-outline  text-white "></h2></>
+                        role ? <> <h2 className="card-title w-2/3 justify-start btn btn-outline bg-[#0F1111] text-white "><PiMedalBold />{role}</h2></> : <><h2 className="card-title w-2/3 justify-start btn btn-outline  text-white "></h2></>
                     }
                     <h2 className="font-bold">Participants: {participants_count}</h2>
                     <p className="w-full h-20">{short_description}</p>
@@ -34,7 +34,7 @@ const WinnerCard = ({ winner }) => {
 
                     <div className="card-actions justify-end">
 
-                        <Link className="w-full" to={`/details/${_id}`}><button className="btn text-xl text-white bg-gradient-to-r from-cyan-500 w-full to-blue-500 mt-10">Details</button></Link>
+                        <Link className="w-full" to={`/details/${_id}`}><button className="btn text-xl text-white hover:bg-orange-500 bg-orange-400 w-full mt-10">Details</button></Link>
                     </div>
                 </div>
             </div>
