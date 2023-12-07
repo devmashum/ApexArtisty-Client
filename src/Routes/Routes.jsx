@@ -36,7 +36,7 @@ export const router = createBrowserRouter([
             {
                 path: 'allContest',
                 element: <PrivateRoutes><AllContest></AllContest></PrivateRoutes>,
-                loader: () => fetch('https://apex-artistry-server.vercel.app//arts')
+                loader: () => fetch('http://localhost:3000/arts')
             },
             {
                 path: 'login',
@@ -49,7 +49,7 @@ export const router = createBrowserRouter([
             {
                 path: 'details/:id',
                 element: <DetailsPage></DetailsPage>,
-                loader: ({ params }) => fetch(`https://apex-artistry-server.vercel.app//arts/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:3000/arts/${params.id}`)
             },
             {
                 path: 'contact',

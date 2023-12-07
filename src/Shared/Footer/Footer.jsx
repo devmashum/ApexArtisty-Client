@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
-        <footer className="footer footer-center p-10 bg-gradient-to-r from-indigo-500 via-purple-300 to-pink-500 text-base-content rounded mt-10">
+        <footer className="footer text-white footer-center p-10 bg-[#232F3F]">
             <nav className="grid grid-flow-col gap-4 lg:text-xl font-bold">
 
                 <Link to={'/'}>Home</Link>
-                <Link to={'http://localhost:5173/allContest'}>All Contest</Link>
-                <Link to={'http://localhost:5173/aboutUs'}>About Us</Link>
-                <Link to={'http://localhost:5173/contact'}>Contact Us</Link>
+                <Link to={'/allContest'} target="0">All Contest</Link>
+                <Link to={'/aboutUs'} target="0">About Us</Link>
+                <Link to={'/contact'} target="0">Contact Us</Link>
 
 
             </nav>
@@ -21,8 +21,8 @@ const Footer = () => {
                 </div>
             </nav>
             <nav>
-                <div className="flex gap-3 underline">  <a href="http://localhost:5173/imprint" target="0" className="font-bold underline">Imprint</a>
-                    <a href="http://localhost:5173/privacy" target="0" className="font-bold">Privacy Policy</a></div>
+                <div className="flex gap-3 underline">  <a href="/imprint" target="0" className="font-bold underline">Imprint</a>
+                    <a href="/privacy" target="0" className="font-bold">Privacy Policy</a></div>
             </nav>
             <aside>
                 <h1 className=" font-bold">© 2023 ApexArtistry. All Rights Reserved. Designed and Developed with <span className='flex items-center justify-center   text-4xl '><GiLoveHowl /></span> by <span className='font-extrabold'><a className='hover-link' href="https://www.linkedin.com/in/faisal-ahmed-mashum/" target="0">Faisal</a></span></h1>

@@ -8,6 +8,7 @@ import { Helmet } from "react-helmet";
 const AllContest = () => {
     const arts = useLoaderData();
     const [filteredData, setFilteredData] = useState(arts);
+
     const search = (e) => {
         const searchTerm = e.target.value.toLowerCase();
         setFilteredData(arts.filter((item) =>

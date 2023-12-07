@@ -1,7 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import { FaCartPlus, FaRegUserCircle, FaSignInAlt } from "react-icons/fa";
 import { BiLogInCircle } from "react-icons/bi";
-import logo from '../../assets/Logo/logo.png'
 import useAuth from '../../Hooks/useAuth';
 import useCart from '../../Hooks/useCart';
 const NavBar = () => {
@@ -14,14 +13,15 @@ const NavBar = () => {
     }
     const navbarLinks = <>
 
-        <NavLink className={({ isActive }) => isActive ? 'btn bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-base font-bold text-white' : 'btn-ghost btn text-base font-bold text-white'} to={'/'}>Home</NavLink>
-        <NavLink className={({ isActive }) => isActive ? 'btn bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-base font-bold text-white mr-5' : 'btn-ghost btn text-base font-bold text-white '} to={'/allContest'}>All Contest</NavLink>
-        <NavLink className={({ isActive }) => isActive ? 'btn bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-base font-bold text-white mr-5' : 'btn-ghost btn text-base font-bold text-white '} to={'/aboutUs'}>About Us</NavLink>
-        <NavLink className={({ isActive }) => isActive ? 'btn bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-base font-bold text-white mr-5' : 'btn-ghost btn text-base font-bold text-white '} to={'/contact'}>Contact</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'btn btn-outline text-white' : 'btn-ghost btn text-base font-bold text-white'} to={'/'}>Home</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'btn btn-outline text-base font-bold text-white mr-5' : 'btn-ghost btn text-base font-bold text-white '} to={'/allContest'}>All Contest</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'btn btn-outline text-base font-bold text-white mr-5' : 'btn-ghost btn text-base font-bold text-white '} to={'/aboutUs'}>About Us</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'btn btn-outline text-base font-bold text-white mr-5' : 'btn-ghost btn text-base font-bold text-white '} to={'/contact'}>Contact</NavLink>
 
         {
-            user ? <NavLink className={({ isActive }) => isActive ? 'btn bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-base font-bold text-white mr-5' : 'btn-ghost btn text-xl font-bold text-white '} to={'/dashboard/cart'}><FaCartPlus></FaCartPlus> <button className=' btn-secondary btn btn-xs'>{cart.length}</button> </NavLink> :
-                <div> <NavLink className={({ isActive }) => isActive ? 'btn bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-base font-bold text-white mr-5' : 'btn-ghost btn text-xl font-bold text-white '} to={'/login'}><FaCartPlus></FaCartPlus> <button className=' btn-secondary btn btn-xs'>0</button> </NavLink></div>
+            user ? <NavLink className={({ isActive }) => isActive ? 'btn  text-base font-bold text-white mr-5' : 'btn-ghost btn text-xl font-bold text-white '} to={'/dashboard/cart'}><FaCartPlus></FaCartPlus> <button className='bg-orange-400 btn btn-xs'><span className='text-white text-base'>{cart.length}</span></button></NavLink> :
+
+                <div> <NavLink className={({ isActive }) => isActive ? 'btn  text-base font-bold text-white mr-5' : 'btn-ghost btn text-xl font-bold text-white '} to={'/login'}><FaCartPlus></FaCartPlus> <button className='bg-orange-400 btn btn-xs'>0</button> </NavLink></div>
         }
     </>
 
@@ -30,7 +30,7 @@ const NavBar = () => {
 
 
     return (
-        <div className="navbar  p-2  z-10 lg:fixed bg-opacity-50 bg-blue-400">
+        <div className="navbar  p-2 bg-[#0F1111]">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -46,7 +46,7 @@ const NavBar = () => {
 
                 </div>
                 <Link to={'/'}>  <div className='flex justify-center items-center'>
-                    <img className='w-20 h-22 ml-5 ' src={logo} alt="" />
+                   
                     <a className=" lg:text-4xl text-2xl font-extrabold text-center text-white ">ApexArtistry</a>
                 </div></Link>
             </div>
@@ -58,12 +58,12 @@ const NavBar = () => {
 
                 {user ?
                     <div>
-                        < NavLink className={'text-2xl btn mr-5 hidden'} to={'/registration'}>Registration</NavLink>
+                        <NavLink NavLink className={'text-2xl btn mr-5 hidden'} to={'/registration'}>Registration</NavLink>
                     </div> : <div>
                         <div className='flex flex-col items-center pt-5'>
 
                             <div>
-                                <Link className='btn btn-success  font-bold text-white text-2xl mr-2 ' to={'/registration'}><FaSignInAlt /></Link>
+                                <Link className='btn btn-ghost font-bold text-white text-2xl mr-2 ' to={'/registration'}><FaSignInAlt /></Link>
                             </div>
                             <div>
                                 <Link className='text-white'>Sign Up</Link>
@@ -77,18 +77,20 @@ const NavBar = () => {
                 {
                     user ? <div className=' dropdown dropdown-end'>
 
-                        <label tabIndex={0} className=" btn btn-secondary text-3xl">
+                        <label tabIndex={0} className=" btn btn-ghost text-white bg-orange-400 text-3xl">
                             <FaRegUserCircle />
                         </label>
-                        <ul tabIndex={0} className=" menu menu-base dropdown-content mt-3 z-[1]  shadow bg-base-100 rounded-box bg-gradient-to-r from-cyan-500 to-blue-500 text-xl ">
+                        <ul tabIndex={0} className="menu menu-base dropdown-content mt-3 z-[1]  shadow rounded-box bg-[#0F1111] text-xl ">
 
-                            <Link className={({ isActive }) => isActive ? ' text-2xl font-bold  text-secondary ' : 'text-2xl font-bold '}> <span className='text-fuchsia-600 text-2xl font-bold'>{user?.displayName}
+                            <Link className={({ isActive }) => isActive ? ' text-2xl font-bold  text-secondary ' : 'text-2xl font-bold '}> <span className='text-orange-400 text-2xl font-bold'>{user?.displayName}
                             </span>
                             </Link>
                             <hr />
-                            <Link to={'/dashboard'} className={({ isActive }) => isActive ? 'btn btn-primary text-base font-bold text-white' : 'btn-ghost btn text-base font-bold text-white'}>Dashboard</Link>
-                            <hr />
-                            <Link onClick={handleLogout} className={({ isActive }) => isActive ? 'btn btn-primary text-base font-bold text-white' : 'btn-ghost btn text-base font-bold text-white'}>Log Out </Link>
+                            <Link to={'/dashboard'} className={({ isActive }) => isActive ? ' text-2xl font-bold  text-secondary ' : 'text-2xl font-bold '}> <span className='text-white text-xl font-bold'>Dashboard
+                            </span>
+                            </Link>
+                           <hr />
+                            <Link onClick={handleLogout} className={({ isActive }) => isActive ? 'btn font-bold text-white' : 'btn-ghost btn text-base font-bold text-white'}> <span className='text-white'>Log Out</span> </Link>
 
                         </ul>
                     </div>
@@ -99,7 +101,7 @@ const NavBar = () => {
                             <div className='flex flex-col items-center pt-5'>
 
                                 <div>
-                                    <Link className='btn btn-secondary  font-bold text-white text-2xl ' to={'login'}><BiLogInCircle /></Link>
+                                    <Link className='btn btn-ghost  font-bold text-white text-2xl ' to={'login'}><BiLogInCircle /></Link>
                                 </div>
                                 <div>
                                     <Link className='text-white'>Login</Link>
@@ -110,7 +112,7 @@ const NavBar = () => {
                 }
             </div>
 
-        </div >
+        </div>
     );
 };
 
