@@ -14,29 +14,20 @@ const AddContest = () => {
         const name = form.name.value;
         const email = form.email.value;
         const img = form.img.value;
-        const participants_count = form.participants_count.value;
         const description = form.description.value;
         const deadline = form.deadline.value;
         const price = form.price.value;
-        const contest_winner_name
-            = form.contest_winner_name
-                .value;
         const artist_name = form.artist_name.value;
-        const contest_prize = form.contest_prize.value;
         console.log(name, email);
         const formData = {
             name: name,
             email: email,
             img: img,
-            participants_count: parseFloat(participants_count),
-
             short_description: description,
             deadline: deadline,
             price: parseFloat(price),
-            contest_winner_name
-                : contest_winner_name,
             artist_name: artist_name,
-            contest_prize: contest_prize
+         
 
 
         }
@@ -91,39 +82,12 @@ const AddContest = () => {
                     </div>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Participants (optional)
-                            </span>
-                        </label>
-                        <input type="number" name="participants_count" defaultValue={'0'} className="input input-bordered" />
-
-                    </div>
-                    <div className="form-control">
-                        <label className="label">
                             <span className="label-text">Short Description (optional)
                             </span>
                         </label>
                         <input type="text" name="description" placeholder="Short Description" className="input input-bordered" />
 
                     </div>
-                    <div className="form-control">
-                        <label className="label">
-                            <span className="label-text">Contest Winner Name (optional)
-
-                            </span>
-                        </label>
-                        <input type="text" name="contest_winner_name" placeholder="Contest Winner Name" className="input input-bordered" />
-
-                    </div>
-                    <div className="form-control">
-                        <label className="label">
-                            <span className="label-text">Contest Prize (optional)
-
-                            </span>
-                        </label>
-                        <input type="text" name="contest_prize" placeholder="Contest Winner Name" className="input input-bordered" />
-
-                    </div>
-
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Deadline</span>

@@ -22,12 +22,14 @@ import MyWinningContest from "../Dashboard/ContentCreator/MyWinningContest";
 import Support from "../Dashboard/Admin/Support";
 import Payment from "../Components/Payment/Payment";
 import PaymentHistory from "../Dashboard/User/PaymentHistory";
+import ErrorPage from "../Shared/ErrorPage/ErrorPage";
 
 
 export const router = createBrowserRouter([
     {
         path: "/",
         element: <Main></Main>,
+        errorElement:<ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
@@ -36,7 +38,7 @@ export const router = createBrowserRouter([
             {
                 path: 'allContest',
                 element: <PrivateRoutes><AllContest></AllContest></PrivateRoutes>,
-                loader: () => fetch('http://localhost:3000/arts')
+                loader: () => fetch('https://apex-artistry-server.vercel.app/arts')
             },
             {
                 path: 'login',
@@ -49,7 +51,7 @@ export const router = createBrowserRouter([
             {
                 path: 'details/:id',
                 element: <DetailsPage></DetailsPage>,
-                loader: ({ params }) => fetch(`http://localhost:3000/arts/${params.id}`)
+                loader: ({ params }) => fetch(`https://apex-artistry-server.vercel.app/arts/${params.id}`)
             },
             {
                 path: 'contact',

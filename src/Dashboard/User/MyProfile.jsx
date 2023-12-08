@@ -72,7 +72,7 @@ const MyProfile = () => {
 
                     </div>
                     <div className="form-control mt-6">
-                        <button type="submit" className="btn btn-info btn-outline text-xl">Send</button>
+                        <button type="submit" className="btn btn-outline text-xl">Send</button>
                     </div>
                 </form>
             </div>
