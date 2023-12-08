@@ -88,6 +88,13 @@ const NavBar = () => {
                             </span>
                             </Link>
                             <hr />
+                            {/* <Link to={'/dashboard'} className={({ isActive }) => isActive ? ' text-2xl font-bold  text-secondary ' : 'text-2xl font-bold '}> <span className='text-white text-xl font-bold'>Dashboard
+                            </span>
+                            </Link> */}
+
+                            {/* <Link to={'/dashboard'} className={({ isActive }) => isActive ? 'btn btn-primary text-base font-bold text-white' : 'btn-ghost btn text-base font-bold text-white'}>Dashboard</Link> */}
+                            <hr />
+                            {/* <Link onClick={handleLogout} className={({ isActive }) => isActive ? 'btn btn-primary text-base font-bold text-white' : 'btn-ghost btn text-base font-bold text-white'}>Log Out </Link> */}
                             <Link to={'/dashboard'} className={({ isActive }) => isActive ? ' text-2xl font-bold  text-secondary ' : 'text-2xl font-bold '}> <span className='text-white text-xl font-bold'>Dashboard
                             </span>
                             </Link>

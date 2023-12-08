@@ -149,9 +149,9 @@ const Dashboard = () => {
             <div className="drawer-side">
               <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay "></label>
               <ul>
+
                 {/* Sidebar content here */}
-                {/* demo */}
-                <div>
+                 <div>
                   <div className="lg:w-64 min-h-screen bg-gradient-to-r from-cyan-500 to-blue-500 pt-10 px-2">
                     {isAdmin && (
                       <>
