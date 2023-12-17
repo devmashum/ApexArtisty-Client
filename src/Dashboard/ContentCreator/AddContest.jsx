@@ -27,9 +27,6 @@ const AddContest = () => {
             deadline: deadline,
             price: parseFloat(price),
             artist_name: artist_name,
-         
-
-
         }
 
 

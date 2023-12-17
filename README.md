@@ -1,25 +1,21 @@
-Concept of this website: 
-
+Project Details:
 ApexArtistry is a fully dynamic and responsive online platform where users can support artists through donations. If a user aspires to be a creative artist, they can submit a request to the admin, who has the authority to elevate a regular user to the status of a creator. Once designated as a creator, individuals can submit their artwork and await the platform's decision on whether they win the contest. Winners receive a prize, while non-winners receive the donated amount after deducting platform charges.
 
 Functionality:
+To test the functionality, please log in with the following credentials:
 
-User Role:
+- As a User: user@gmail.com
+- As a Creator: creator@gmail.com
+- As an Admin: admin@gmail.com
+  Password (same for all users): 123456
 
-Users can log in by creating a new account or using their Gmail credentials.
-Donations can be made using Visa or Mastercard.
-Users can view the artworks they have donated to and check their payment history.
-Users can submit a request to become a creator.
-Creator Role:
+Dashboard: I have created a dashboard for three types of users.
 
-Creators can submit their creations to the platform.
-They can check their submitted artworks and view whether they have won the contest or if it is pending a decision.
-Creators can also support other artists by making donations on the platform.
+1. Normal User: A normal user can select an art and donate using the Card Payment method. In the normal user dashboard, users can check their profile, cart, donated contests, and payment history.
+2. Creator: A creator can add art by clicking "Add Contest." They can check their submitted contests and verify whether they won a contest or not. If they also donated for an art, they can check their payment history.
+3. Admin: An admin can manage all users, including making a normal user a creator. If necessary, the admin can delete a user. They can also declare a creator as a winner. The admin has access to the support section, displaying all contact data.
 
-Admin Role:
-
-Admins have the authority to manage users, including changing roles. They can transition a user to a creator if a request has been made.
-User deletion is within the admin's purview when necessary.
-Admins can appoint other users as admins for internal operational purposes.
-Contest management includes declaring submitted artworks as winners or deleting them.
-The admin panel handles inquiries or contact messages from users, creators, or other companies.
+User Authentication: For user registration, user login/logout system, I have utilized Firebase.
+Security: I have secured this website using Json Web Token (JWT).
+Payment: The most popular payment method, Stripe, is implemented for the payment process.
+DataStore: To store all data, I have used MongoDB.
