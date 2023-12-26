@@ -1,21 +1,32 @@
-Project Details:
-ApexArtistry is a fully dynamic and responsive online platform where users can support artists through donations. If a user aspires to be a creative artist, they can submit a request to the admin, who has the authority to elevate a regular user to the status of a creator. Once designated as a creator, individuals can submit their artwork and await the platform's decision on whether they win the contest. Winners receive a prize, while non-winners receive the donated amount after deducting platform charges.
+Projekname: Apex Artistry
 
-Functionality:
-To test the functionality, please log in with the following credentials:
+Projektdetails:
+ApexArtistry ist eine dynamische, reaktionsfähige Plattform, die es Benutzern ermöglicht, Künstler durch Spenden zu unterstützen. Benutzer, die selbst kreativ tätig werden möchten, können eine Genehmigung vom Administrator beantragen, um Kunstwerke für Wettbewerbe einzureichen. Gewinner erhalten Preise, während Nicht-Gewinner die gespendeten Beträge nach Abzug von Plattformgebühren erhalten.
 
-- As a User: user@gmail.com
-- As a Creator: creator@gmail.com
-- As an Admin: admin@gmail.com
-  Password (same for all users): 123456
+Hauptmerkmale:
 
-Dashboard: I have created a dashboard for three types of users.
+Artikelanzeige:
+Präsentation verschiedener Kunstwerke von Künstlern mit Funktionen wie Gewöhnung oder Bearbeitung, Bildern, Zusammenfassungen und Preisen.
+Responsive Design:
+Gewährleistung einer nahtlosen Benutzererfahrung auf verschiedenen Geräten, einschließlich Desktops, Tablets und Smartphones.
+Dynamisches Routing:
+Nutzung von React.js dynamischem Routing für die effiziente Bearbeitung unterschiedlicher Seiten und Inhalte.
+Details Section: Bei Klicken des Details-Buttons können Benutzer Informationen zu einem Kunstwerk lesen, den Preis sehen und spenden.
+Bezahlungsmöglichkeiten: Ein Benutzer kann direkt mit seiner Kredit- oder Visakarte spenden.
+Kunstler werden: Ein normaler Benutzer kann auch als Künstler seine Kunst in diesem Platform veröffentlichen. Dafür muss er/sie eine E-Mail an den Administrator schreiben, dass er/sie als Künstler Zugang benötigt. Dann kann der Administrator in seinem Dashboard den Zugang gewähren.
+Benutzerauthentifizierung:Firebase wird für die Benutzerregistrierung sowie die An- und Abmeldungs-Funktionalität verwendet.
+Sicherheit: Die Website ist durch die Verwendung von JSON Web Token (JWT) abgesichert, um eine sichere Benutzererfahrung zu gewährleisten.
+Datenspeicher:MongoDB wird genutzt, um alle relevanten Daten zu speichern und eine effiziente Datenverwaltung sicherzustellen.
 
-1. Normal User: A normal user can select an art and donate using the Card Payment method. In the normal user dashboard, users can check their profile, cart, donated contests, and payment history.
-2. Creator: A creator can add art by clicking "Add Contest." They can check their submitted contests and verify whether they won a contest or not. If they also donated for an art, they can check their payment history.
-3. Admin: An admin can manage all users, including making a normal user a creator. If necessary, the admin can delete a user. They can also declare a creator as a winner. The admin has access to the support section, displaying all contact data.
+Funktionalität: Um die Funktionalität zu testen, melden Sie sich bitte mit den folgenden Anmeldedaten an:
+Als Benutzer: user@gmail.com
+Als Creator: creator@gmail.com
+Als Administrator: admin@gmail.com
+Passwort (gleich für alle Benutzer): 123456
 
-User Authentication: For user registration, user login/logout system, I have utilized Firebase.
-Security: I have secured this website using Json Web Token (JWT).
-Payment: The most popular payment method, Stripe, is implemented for the payment process.
-DataStore: To store all data, I have used MongoDB.
+Dashboard: Ich habe ein Dashboard für drei Arten von Benutzern erstellt.
+Normaler Benutzer: Ein normaler Benutzer kann ein Kunstwerk auswählen und über die Zahlungsmethode Card Payment spenden. Im Dashboard für normale Benutzer können sie ihr Profil, den Warenkorb, gespendete Wettbewerbe und die Zahlungshistorie überprüfen.
+
+Kunstler: Ein Creator kann ein Kunstwerk hinzufügen, indem er auf Contest hinzufügen klickt. Sie können ihre eingereichten Wettbewerbe überprüfen und feststellen, ob sie einen Wettbewerb gewonnen haben oder nicht. Wenn sie auch für ein Kunstwerk gespendet haben, können sie ihre Zahlungshistorie überprüfen.
+
+Administrator: Ein Administrator kann alle Benutzer verwalten, einschließlich der Befugnis, einen normalen Benutzer zu einem Creator zu machen. Bei Bedarf kann der Administrator einen Benutzer löschen. Sie können auch einen Creator als Gewinner erklären. Der Administrator hat Zugriff auf den Support-Bereich, der alle Kontaktinformationen anzeigt.
