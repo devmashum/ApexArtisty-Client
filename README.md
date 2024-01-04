@@ -126,4 +126,22 @@
           <li>
             Der Administrator hat Zugriff auf den Support-Bereich, der alle Kontaktinformationen anzeigt
           </li>
-        </ul
+        </ul>
+      </div>
+    </div>
+
+  </h4>
+
+  <h4 class='font-bold'>Technologien, die ich für diese Plattform verwendet habe:</h4>
+  <div class='lg:p-10 grid grid-cols-3 lg:grid-cols-5 lg:gap-5 gap-2 text-center'>
+    <h2 class='border border-xl border-black text-sm lg:text-base'>HTML</h2>
+    <h2 class='border border-xl border-black'>CSS</h2>
+    <h2 class='border border-xl border-black'>JavaScript</h2>
+    <h2 class='border border-xl border-black'>React</h2>
+    <h2 class='border border-xl border-black'>DaisyUi</h2>
+    <h2 class='border border-xl border-black'>MongoDB</h2>
+    <h2 class='border border-xl border-black'>Firebase</h2>
+    <h2 class='border border-xl border-black'>JWT</h2>
+    <h2 class='border border-xl border-black'>Stripe</h2>
+  </div>
+</div>
